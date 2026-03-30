@@ -150,13 +150,13 @@ export default function KeywordQuiz() {
 
   const result = getCompetitionResult(totalScore);
 
-  const scrollToPricing = () => {
-    document.querySelector("#pricing")?.scrollIntoView({ behavior: "smooth" });
+  const goToPricing = () => {
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "cta_click", {
         event_label: `quiz_${result.level.toLowerCase().replace(/\s/g, "_")}`,
       });
     }
+    window.location.href = "/seo-pricing";
   };
 
   return (
@@ -241,7 +241,7 @@ export default function KeywordQuiz() {
                   </div>
 
                   <button
-                    onClick={scrollToPricing}
+                    onClick={goToPricing}
                     className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                   >
                     {result.cta}

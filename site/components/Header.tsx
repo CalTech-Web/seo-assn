@@ -1,18 +1,103 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X, Search } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 
-const navLinks = [
-  { label: "SEO Checklist", href: "#audit" },
-  { label: "Keyword Quiz", href: "#quiz" },
-  { label: "Pricing Guide", href: "#pricing" },
-  { label: "Get Started", href: "#brief" },
+const toolLinks = [
+  { label: "SEO Audit Checklist", href: "/seo-audit-checklist" },
+  { label: "Keyword Difficulty Quiz", href: "/keyword-difficulty-quiz" },
+  { label: "SEO Pricing Guide", href: "/seo-pricing" },
+  { label: "SEO Brief Generator", href: "/get-started" },
 ];
+
+const learnLinks = [
+  { label: "What Is SEO?", href: "/what-is-seo" },
+  { label: "Do I Need SEO?", href: "/do-i-need-seo" },
+  { label: "How Much Does SEO Cost?", href: "/how-much-does-seo-cost" },
+  { label: "How Long Does SEO Take?", href: "/how-long-does-seo-take" },
+  { label: "Local SEO Guide", href: "/local-seo-guide" },
+  { label: "How to Rank on Google", href: "/how-to-rank-on-google" },
+];
+
+const mainLinks = [
+  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
+];
+
+function Dropdown({
+  label,
+  links,
+  scrolled,
+  pathname,
+}: {
+  label: string;
+  links: { label: string; href: string }[];
+  scrolled: boolean;
+  pathname: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const isActive = links.some((l) => pathname === l.href);
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+          scrolled
+            ? isActive
+              ? "text-primary bg-surface"
+              : "text-text-muted hover:text-primary hover:bg-surface"
+            : isActive
+            ? "text-white bg-white/15"
+            : "text-white/80 hover:text-white hover:bg-white/10"
+        }`}
+      >
+        {label}
+        <ChevronDown
+          className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-border/50 py-2 z-50">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className={`block px-4 py-2.5 text-sm transition-colors ${
+                pathname === link.href
+                  ? "text-primary bg-surface font-medium"
+                  : "text-text-muted hover:text-primary hover:bg-surface"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  const [mobileLearnOpen, setMobileLearnOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -20,62 +105,77 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleClick = (href: string) => {
+  useEffect(() => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  }, [pathname]);
+
+  const showTransparent = isHome && !scrolled;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+        showTransparent
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-md shadow-sm"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 group"
-          >
+          <Link href="/" className="flex items-center gap-2 group">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
               <Search className="h-5 w-5" />
             </div>
             <span
               className={`text-lg font-bold transition-colors ${
-                scrolled ? "text-primary" : "text-white"
+                showTransparent ? "text-white" : "text-primary"
               }`}
             >
               The SEO Association
             </span>
-          </button>
+          </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <button
+          <nav className="hidden lg:flex items-center gap-1">
+            <Dropdown
+              label="Free Tools"
+              links={toolLinks}
+              scrolled={!showTransparent}
+              pathname={pathname}
+            />
+            <Dropdown
+              label="Learn SEO"
+              links={learnLinks}
+              scrolled={!showTransparent}
+              pathname={pathname}
+            />
+            {mainLinks.map((link) => (
+              <Link
                 key={link.href}
-                onClick={() => handleClick(link.href)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  scrolled
-                    ? "text-text-muted hover:text-primary hover:bg-surface"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
-                } ${
-                  link.label === "Get Started"
-                    ? "!bg-accent !text-primary-dark font-semibold hover:!bg-accent-light"
-                    : ""
+                href={link.href}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  showTransparent
+                    ? pathname === link.href
+                      ? "text-white bg-white/15"
+                      : "text-white/80 hover:text-white hover:bg-white/10"
+                    : pathname === link.href
+                    ? "text-primary bg-surface"
+                    : "text-text-muted hover:text-primary hover:bg-surface"
                 }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
+            <Link
+              href="/get-started"
+              className="ml-2 px-4 py-2 rounded-lg text-sm font-bold bg-accent text-primary-dark hover:bg-accent-light transition-colors"
+            >
+              Get Started
+            </Link>
           </nav>
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden p-2 rounded-lg ${
-              scrolled ? "text-primary" : "text-white"
+            className={`lg:hidden p-2 rounded-lg ${
+              showTransparent ? "text-white" : "text-primary"
             }`}
             aria-label="Toggle menu"
           >
@@ -85,21 +185,69 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-border shadow-lg">
+        <div className="lg:hidden bg-white border-t border-border shadow-lg max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-3 space-y-1">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleClick(link.href)}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium text-text-muted hover:text-primary hover:bg-surface transition-colors ${
-                  link.label === "Get Started"
-                    ? "!bg-accent !text-primary-dark font-semibold"
-                    : ""
+            {/* Tools accordion */}
+            <button
+              onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
+              className="flex items-center justify-between w-full px-4 py-3 text-sm font-semibold text-primary"
+            >
+              Free Tools
+              <ChevronDown
+                className={`h-4 w-4 transition-transform ${
+                  mobileToolsOpen ? "rotate-180" : ""
                 }`}
+              />
+            </button>
+            {mobileToolsOpen &&
+              toolLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block pl-8 pr-4 py-2.5 text-sm text-text-muted hover:text-primary rounded-lg hover:bg-surface"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+            {/* Learn accordion */}
+            <button
+              onClick={() => setMobileLearnOpen(!mobileLearnOpen)}
+              className="flex items-center justify-between w-full px-4 py-3 text-sm font-semibold text-primary"
+            >
+              Learn SEO
+              <ChevronDown
+                className={`h-4 w-4 transition-transform ${
+                  mobileLearnOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {mobileLearnOpen &&
+              learnLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block pl-8 pr-4 py-2.5 text-sm text-text-muted hover:text-primary rounded-lg hover:bg-surface"
+                >
+                  {link.label}
+                </Link>
+              ))}
+
+            {mainLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block px-4 py-3 text-sm font-medium text-text-muted hover:text-primary rounded-lg hover:bg-surface"
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
+            <Link
+              href="/get-started"
+              className="block px-4 py-3 text-sm font-bold bg-accent text-primary-dark rounded-lg text-center"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       )}

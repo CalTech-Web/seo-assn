@@ -82,7 +82,7 @@ function getResult(score: number) {
       message:
         "Your website has significant gaps that are likely costing you customers. The good news: these are all fixable. CalTech Web can handle every item on this list.",
       cta: "Get a Free SEO Assessment",
-      ctaHref: "#brief",
+      ctaHref: "/get-started",
     };
   }
   if (score <= 16) {
@@ -93,7 +93,7 @@ function getResult(score: number) {
       message:
         "You've got some basics in place but there are clear gaps holding you back. A focused SEO strategy could make a real difference.",
       cta: "See What's Missing",
-      ctaHref: "#quiz",
+      ctaHref: "/keyword-difficulty-quiz",
     };
   }
   return {
@@ -103,7 +103,7 @@ function getResult(score: number) {
     message:
       "Great foundation! Now it's about going deeper, targeting the right keywords and building authority. Let's find your next growth opportunity.",
     cta: "Find Your Keywords",
-    ctaHref: "#quiz",
+    ctaHref: "/keyword-difficulty-quiz",
   };
 }
 
@@ -135,13 +135,12 @@ export default function AuditChecklist() {
   };
 
   const handleCtaClick = () => {
-    const el = document.querySelector(result.ctaHref);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "cta_click", {
         event_label: `audit_${result.level.toLowerCase().replace(/\s/g, "_")}`,
       });
     }
+    window.location.href = result.ctaHref;
   };
 
   return (

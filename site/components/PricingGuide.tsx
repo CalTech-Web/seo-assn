@@ -92,13 +92,13 @@ const priceFactors = [
 ];
 
 export default function PricingGuide() {
-  const scrollToBrief = () => {
-    document.querySelector("#brief")?.scrollIntoView({ behavior: "smooth" });
+  const goToBrief = () => {
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("event", "cta_click", {
         event_label: "pricing_get_recommendation",
       });
     }
+    window.location.href = "/get-started";
   };
 
   return (
@@ -239,7 +239,7 @@ export default function PricingGuide() {
             honestly, even if the answer is to start small.
           </p>
           <button
-            onClick={scrollToBrief}
+            onClick={goToBrief}
             className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
           >
             Get a Recommendation

@@ -1,68 +1,110 @@
 "use client";
 
+import Link from "next/link";
 import { Search, ExternalLink } from "lucide-react";
 
-const footerLinks = [
-  { label: "Home", href: "#" },
-  { label: "SEO Checklist", href: "#audit" },
-  { label: "Pricing Guide", href: "#pricing" },
-  { label: "Get a Free Strategy Call", href: "#brief" },
+const toolLinks = [
+  { label: "SEO Audit Checklist", href: "/seo-audit-checklist" },
+  { label: "Keyword Difficulty Quiz", href: "/keyword-difficulty-quiz" },
+  { label: "SEO Pricing Guide", href: "/seo-pricing" },
+  { label: "SEO Brief Generator", href: "/get-started" },
+];
+
+const learnLinks = [
+  { label: "What Is SEO?", href: "/what-is-seo" },
+  { label: "Do I Need SEO?", href: "/do-i-need-seo" },
+  { label: "How Much Does SEO Cost?", href: "/how-much-does-seo-cost" },
+  { label: "How Long Does SEO Take?", href: "/how-long-does-seo-take" },
+  { label: "Local SEO Guide", href: "/local-seo-guide" },
+  { label: "How to Rank on Google", href: "/how-to-rank-on-google" },
+];
+
+const companyLinks = [
+  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
 ];
 
 export default function Footer() {
-  const handleClick = (e: React.MouseEvent, href: string) => {
-    if (href.startsWith("#")) {
-      e.preventDefault();
-      if (href === "#") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
-
   return (
     <footer className="bg-primary-dark text-white/70">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Left */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10">
                 <Search className="h-4 w-4 text-accent" />
               </div>
               <span className="text-lg font-bold text-white">
                 The SEO Association
               </span>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed">
               A free educational resource helping small business owners
               understand and invest in SEO with confidence.
             </p>
           </div>
 
-          {/* Center */}
+          {/* Free Tools */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Quick Links
+              Free Tools
             </h3>
             <ul className="space-y-2">
-              {footerLinks.map((link) => (
-                <li key={link.label}>
-                  <a
+              {toolLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
                     href={link.href}
-                    onClick={(e) => handleClick(e, link.href)}
                     className="text-sm hover:text-white transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Right */}
+          {/* Learn SEO */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Learn SEO
+            </h3>
+            <ul className="space-y-2">
+              {learnLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Company
+            </h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CalTech Web */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
               In-House SEO By
@@ -84,7 +126,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-          <p>&copy; {new Date().getFullYear()} The SEO Association. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} The SEO Association. All rights
+            reserved.
+          </p>
           <p>
             Built by{" "}
             <a

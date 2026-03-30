@@ -1,15 +1,9 @@
 "use client";
 
-import { ArrowDown, Shield } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Shield } from "lucide-react";
 
 export default function HeroSection() {
-  const scrollToAudit = () => {
-    document.querySelector("#audit")?.scrollIntoView({ behavior: "smooth" });
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("event", "cta_click", { event_label: "hero_check_seo" });
-    }
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-dark">
       {/* Animated background */}
@@ -61,23 +55,20 @@ export default function HeroSection() {
           tools, no fluff, no obligation.
         </p>
 
-        <button
-          onClick={scrollToAudit}
+        <Link
+          href="/seo-audit-checklist"
           className="mt-10 inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all duration-300 hover:-translate-y-0.5"
         >
           Check My SEO Now
-          <ArrowDown className="h-5 w-5" />
-        </button>
+          <ArrowRight className="h-5 w-5" />
+        </Link>
 
         <div className="mt-8 flex items-center justify-center gap-2 text-white/50 text-sm">
           <Shield className="h-4 w-4" />
-          <span>Free Resource. No spam. No obligation. Powered by CalTech Web.</span>
+          <span>
+            Free Resource. No spam. No obligation. Powered by CalTech Web.
+          </span>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-6 w-6 text-white/30" />
       </div>
     </section>
   );
