@@ -126,21 +126,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/40">
           <p>
             &copy; {new Date().getFullYear()} The SEO Association. All rights
             reserved.
-          </p>
-          <p>
-            Built by{" "}
-            <a
-              href="https://caltechweb.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors"
-            >
-              CalTech Web
-            </a>
           </p>
         </div>
       </div>
