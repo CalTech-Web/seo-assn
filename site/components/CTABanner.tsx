@@ -46,7 +46,7 @@ export default function CTABanner({
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 text-center">
         <h2
           className={`text-2xl sm:text-3xl font-bold mb-4 ${
             variant === "primary" ? "text-white" : "text-primary"

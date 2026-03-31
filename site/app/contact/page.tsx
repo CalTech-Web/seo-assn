@@ -30,7 +30,7 @@ export default function ContactPage() {
           image={{ src: "/images/cta-magnifier-growth.svg", alt: "Contact and growth illustration" }}
         />
 
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             <Link
               href="/get-started"

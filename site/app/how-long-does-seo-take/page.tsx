@@ -93,9 +93,9 @@ export default function HowLongDoesSEOTakePage() {
             { label: "Learn SEO", href: "/" },
             { label: "How Long Does SEO Take?" },
           ]}
-          image={{ src: "/images/cta-magnifier-growth.svg", alt: "SEO growth timeline illustration" }}
+          image={{ src: "/images/timeline-growth.svg", alt: "SEO timeline growth illustration" }}
         />
-        <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">

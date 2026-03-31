@@ -39,7 +39,7 @@ export default function PageHero({
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
         <div className={`flex flex-col ${image ? "lg:flex-row lg:items-center lg:gap-12" : ""}`}>
           <div className={image ? "flex-1" : "max-w-3xl"}>
             <div className="mb-4">

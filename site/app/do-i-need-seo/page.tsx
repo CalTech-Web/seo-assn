@@ -49,9 +49,9 @@ export default function DoINeedSEOPage() {
             { label: "Learn SEO", href: "/" },
             { label: "Do I Need SEO?" },
           ]}
-          image={{ src: "/images/about-trust-network.svg", alt: "SEO decision illustration" }}
+          image={{ src: "/images/decision-path.svg", alt: "Decision path illustration" }}
         />
-        <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">

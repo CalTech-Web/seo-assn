@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0a500"/>
+      <stop offset="100%" style="stop-color:#f5c842"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="340" fill="url(#bgGrad)" rx="16"/>
+  <!-- Browser window -->
+  <rect x="60" y="50" width="280" height="200" rx="8" fill="#1a2133" stroke="#2d3750" stroke-width="1.5"/>
+  <rect x="60" y="50" width="280" height="28" rx="8" fill="#1e2840"/>
+  <circle cx="78" cy="64" r="4" fill="#e879a0" opacity="0.7"/>
+  <circle cx="92" cy="64" r="4" fill="#f0a500" opacity="0.7"/>
+  <circle cx="106" cy="64" r="4" fill="#4dbfa8" opacity="0.7"/>
+  <rect x="130" y="58" width="140" height="12" rx="6" fill="#0d1117"/>
+  <!-- Search bar -->
+  <rect x="80" y="90" width="240" height="28" rx="14" fill="#0d1117" stroke="#2d3750" stroke-width="1"/>
+  <circle cx="98" cy="104" r="7" fill="none" stroke="#f0a500" stroke-width="1.5"/>
+  <line x1="103" y1="109" x2="108" y2="114" stroke="#f0a500" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="114" y="100" width="100" height="6" rx="3" fill="#2d3750"/>
+  <!-- Search results -->
+  <rect x="80" y="128" width="240" height="32" rx="4" fill="#1e2840" stroke="#f0a500" stroke-width="1" opacity="0.8"/>
+  <rect x="88" y="134" width="100" height="6" rx="3" fill="#f0a500" opacity="0.6"/>
+  <rect x="88" y="146" width="160" height="4" rx="2" fill="#4a5568" opacity="0.5"/>
+  <text x="290" y="146" font-size="8" fill="#4dbfa8" font-family="sans-serif">#1</text>
+  <rect x="80" y="168" width="240" height="28" rx="4" fill="#1e2840" opacity="0.5"/>
+  <rect x="88" y="174" width="80" height="6" rx="3" fill="#2d3750"/>
+  <rect x="88" y="184" width="140" height="4" rx="2" fill="#2d3750" opacity="0.5"/>
+  <rect x="80" y="204" width="240" height="28" rx="4" fill="#1e2840" opacity="0.3"/>
+  <rect x="88" y="210" width="90" height="6" rx="3" fill="#2d3750" opacity="0.6"/>
+  <rect x="88" y="220" width="120" height="4" rx="2" fill="#2d3750" opacity="0.3"/>
+  <!-- Floating gear -->
+  <g transform="translate(340, 80)">
+    <circle cx="0" cy="0" r="16" fill="#1e2840" stroke="#6cb4e8" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#6cb4e8" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#6cb4e8" opacity="0.6"/>
+  </g>
+  <!-- Arrow connecting to results -->
+  <path d="M 200 260 C 200 280, 280 280, 280 300" fill="none" stroke="#f0a500" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Bottom label pill -->
+  <rect x="130" y="270" width="140" height="28" rx="14" fill="#1e2840" stroke="#f0a500" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="146" y="280" width="60" height="6" rx="3" fill="#f0a500" opacity="0.5"/>
+  <rect x="212" y="280" width="40" height="6" rx="3" fill="#4dbfa8" opacity="0.5"/>
+  <!-- Sparkles -->
+  <circle cx="50" cy="120" r="2" fill="#f0a500" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="360" cy="200" r="1.5" fill="#4dbfa8" opacity="0.6" filter="url(#glow)"/>
+</svg>

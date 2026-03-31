@@ -64,10 +64,10 @@ export default function WhatIsSEOPage() {
             { label: "Learn SEO", href: "/" },
             { label: "What Is SEO?" },
           ]}
-          image={{ src: "/images/guides-section.svg", alt: "SEO education illustration" }}
+          image={{ src: "/images/seo-explained.svg", alt: "SEO explained illustration" }}
         />
 
-        <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">

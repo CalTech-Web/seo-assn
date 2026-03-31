@@ -136,7 +136,7 @@ export default function Home() {
         <section className="relative py-20 bg-white overflow-hidden">
           {/* Decorative orb */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
-          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
             <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
               <div className="flex-1 text-center lg:text-left">
                 <h2 className="text-3xl sm:text-4xl font-bold text-primary">
@@ -184,7 +184,7 @@ export default function Home() {
               backgroundSize: "32px 32px",
             }}
           />
-          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
             <div className="text-center mb-14">
               <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-accent/15 to-accent-light/15 text-accent-dark text-sm font-semibold mb-4 border border-accent/20">
                 Free Tools
@@ -253,7 +253,7 @@ export default function Home() {
             }}
           />
 
-          <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 text-center">
             <div className="relative inline-flex items-center justify-center mb-6">
               <div className="absolute inset-0 w-16 h-16 rounded-full bg-accent/20 blur-xl mx-auto" />
               <Shield className="relative h-12 w-12 text-accent" />
@@ -288,7 +288,7 @@ export default function Home() {
         {/* Learn SEO Articles */}
         <section className="relative py-20 bg-white overflow-hidden">
           <div className="absolute top-0 left-0 w-72 h-72 bg-primary/3 rounded-full blur-3xl" />
-          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
             {/* Header with illustration */}
             <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
               <div className="flex-1 text-center lg:text-left">
@@ -306,8 +306,8 @@ export default function Home() {
               </div>
               <div className="shrink-0">
                 <Image
-                  src="/images/step1-audit-checklist.svg"
-                  alt="SEO audit checklist illustration"
+                  src="/images/learn-books.svg"
+                  alt="Learn SEO guides illustration"
                   width={280}
                   height={280}
                   className="w-56 lg:w-72"
@@ -355,7 +355,7 @@ export default function Home() {
             className="absolute bottom-0 left-1/4 w-48 h-48 bg-amber-300/20 rounded-full blur-3xl animate-pulse-slow"
             style={{ animationDelay: "1.5s" }}
           />
-          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="flex-1 flex justify-center lg:justify-start">
                 <Image

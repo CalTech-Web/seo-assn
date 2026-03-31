@@ -1,0 +1,74 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="340" fill="url(#bgGrad)" rx="16"/>
+  <!-- Three tier cards -->
+  <!-- Basic tier -->
+  <g transform="translate(70,60)">
+    <rect x="-45" y="0" width="90" height="200" rx="10" fill="#1a2133" stroke="#2d3750" stroke-width="1.5"/>
+    <rect x="-45" y="0" width="90" height="40" rx="10" fill="#1e2840"/>
+    <rect x="-45" y="30" width="90" height="10" fill="#1e2840"/>
+    <rect x="-30" y="12" width="60" height="6" rx="3" fill="#4a5568"/>
+    <text x="0" y="72" text-anchor="middle" font-size="22" fill="#4dbfa8" font-family="sans-serif" font-weight="bold">$</text>
+    <rect x="-25" y="85" width="50" height="4" rx="2" fill="#2d3750"/>
+    <rect x="-20" y="96" width="40" height="4" rx="2" fill="#2d3750" opacity="0.6"/>
+    <rect x="-22" y="107" width="44" height="4" rx="2" fill="#2d3750" opacity="0.4"/>
+    <rect x="-18" y="118" width="36" height="4" rx="2" fill="#2d3750" opacity="0.3"/>
+    <rect x="-28" y="140" width="56" height="22" rx="11" fill="#1e2840" stroke="#4dbfa8" stroke-width="1"/>
+    <rect x="-14" y="148" width="28" height="5" rx="2.5" fill="#4dbfa8" opacity="0.5"/>
+  </g>
+  <!-- Pro tier (featured, taller) -->
+  <g transform="translate(200,40)">
+    <rect x="-50" y="0" width="100" height="230" rx="10" fill="#1a2133" stroke="#f0a500" stroke-width="2" filter="url(#glow)"/>
+    <rect x="-50" y="0" width="100" height="44" rx="10" fill="#1e2840"/>
+    <rect x="-50" y="34" width="100" height="10" fill="#1e2840"/>
+    <rect x="-32" y="14" width="64" height="6" rx="3" fill="#f0a500" opacity="0.6"/>
+    <!-- Star badge -->
+    <circle cx="34" cy="14" r="8" fill="#f0a500" opacity="0.2"/>
+    <polygon points="34,8 36,12 40,12 37,15 38,19 34,17 30,19 31,15 28,12 32,12" fill="#f5c842" opacity="0.8" transform="scale(0.7) translate(14,4)"/>
+    <text x="0" y="78" text-anchor="middle" font-size="26" fill="#f0a500" font-family="sans-serif" font-weight="bold">$$</text>
+    <rect x="-30" y="94" width="60" height="4" rx="2" fill="#2d3750"/>
+    <rect x="-25" y="106" width="50" height="4" rx="2" fill="#2d3750" opacity="0.6"/>
+    <rect x="-28" y="118" width="56" height="4" rx="2" fill="#2d3750" opacity="0.5"/>
+    <rect x="-22" y="130" width="44" height="4" rx="2" fill="#2d3750" opacity="0.4"/>
+    <rect x="-26" y="142" width="52" height="4" rx="2" fill="#2d3750" opacity="0.3"/>
+    <rect x="-32" y="165" width="64" height="26" rx="13" fill="#f0a500" opacity="0.9"/>
+    <rect x="-16" y="174" width="32" height="6" rx="3" fill="#1e2840"/>
+    <!-- Popular label -->
+    <rect x="-24" y="-10" width="48" height="16" rx="8" fill="#f0a500" filter="url(#glow)"/>
+    <rect x="-14" y="-4" width="28" height="5" rx="2.5" fill="#1e2840"/>
+  </g>
+  <!-- Enterprise tier -->
+  <g transform="translate(330,60)">
+    <rect x="-45" y="0" width="90" height="200" rx="10" fill="#1a2133" stroke="#2d3750" stroke-width="1.5"/>
+    <rect x="-45" y="0" width="90" height="40" rx="10" fill="#1e2840"/>
+    <rect x="-45" y="30" width="90" height="10" fill="#1e2840"/>
+    <rect x="-30" y="12" width="60" height="6" rx="3" fill="#4a5568"/>
+    <text x="0" y="72" text-anchor="middle" font-size="22" fill="#6cb4e8" font-family="sans-serif" font-weight="bold">$$$</text>
+    <rect x="-25" y="85" width="50" height="4" rx="2" fill="#2d3750"/>
+    <rect x="-20" y="96" width="40" height="4" rx="2" fill="#2d3750" opacity="0.6"/>
+    <rect x="-22" y="107" width="44" height="4" rx="2" fill="#2d3750" opacity="0.4"/>
+    <rect x="-18" y="118" width="36" height="4" rx="2" fill="#2d3750" opacity="0.3"/>
+    <rect x="-28" y="140" width="56" height="22" rx="11" fill="#1e2840" stroke="#6cb4e8" stroke-width="1"/>
+    <rect x="-14" y="148" width="28" height="5" rx="2.5" fill="#6cb4e8" opacity="0.5"/>
+  </g>
+  <!-- Bottom comparison row -->
+  <rect x="50" y="290" width="300" height="30" rx="8" fill="#1e2840" stroke="#2d3750" stroke-width="1"/>
+  <circle cx="120" cy="305" r="6" fill="#4dbfa8" opacity="0.3"/>
+  <circle cx="200" cy="305" r="6" fill="#f0a500" opacity="0.4"/>
+  <circle cx="280" cy="305" r="6" fill="#6cb4e8" opacity="0.3"/>
+  <rect x="135" y="302" width="30" height="5" rx="2.5" fill="#4a5568" opacity="0.4"/>
+  <rect x="215" y="302" width="30" height="5" rx="2.5" fill="#4a5568" opacity="0.4"/>
+  <rect x="295" y="302" width="30" height="5" rx="2.5" fill="#4a5568" opacity="0.4"/>
+  <!-- Sparkles -->
+  <circle cx="40" cy="50" r="2" fill="#f0a500" opacity="0.4" filter="url(#glow)"/>
+  <circle cx="370" cy="280" r="1.5" fill="#4dbfa8" opacity="0.5" filter="url(#glow)"/>
+</svg>

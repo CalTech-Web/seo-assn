@@ -1,0 +1,49 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="340" fill="url(#bgGrad)" rx="16"/>
+  <!-- Diamond decision node -->
+  <g transform="translate(200,70)">
+    <rect x="-30" y="-30" width="60" height="60" rx="6" fill="#1e2840" stroke="#f0a500" stroke-width="2" transform="rotate(45)" filter="url(#glow)"/>
+    <text x="0" y="5" text-anchor="middle" font-size="16" fill="#f0a500" font-family="sans-serif" font-weight="bold">?</text>
+  </g>
+  <!-- Left path: Yes -->
+  <line x1="160" y1="100" x2="100" y2="150" stroke="#4dbfa8" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+  <g transform="translate(100,180)">
+    <rect x="-50" y="-25" width="100" height="50" rx="8" fill="#1a2133" stroke="#4dbfa8" stroke-width="2"/>
+    <circle cx="-25" cy="0" r="10" fill="#4dbfa8" opacity="0.2"/>
+    <polyline points="-30,-3 -26,2 -20,-5" fill="none" stroke="#4dbfa8" stroke-width="2" stroke-linecap="round"/>
+    <rect x="-8" y="-5" width="40" height="5" rx="2.5" fill="#4a5568"/>
+    <rect x="-8" y="5" width="30" height="4" rx="2" fill="#4a5568" opacity="0.5"/>
+  </g>
+  <!-- Right path: Wait -->
+  <line x1="240" y1="100" x2="300" y2="150" stroke="#e879a0" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+  <g transform="translate(300,180)">
+    <rect x="-50" y="-25" width="100" height="50" rx="8" fill="#1a2133" stroke="#e879a0" stroke-width="2"/>
+    <circle cx="-25" cy="0" r="10" fill="#e879a0" opacity="0.2"/>
+    <line x1="-29" y1="-4" x2="-21" y2="4" stroke="#e879a0" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-21" y1="-4" x2="-29" y2="4" stroke="#e879a0" stroke-width="2" stroke-linecap="round"/>
+    <rect x="-8" y="-5" width="40" height="5" rx="2.5" fill="#4a5568"/>
+    <rect x="-8" y="5" width="30" height="4" rx="2" fill="#4a5568" opacity="0.5"/>
+  </g>
+  <!-- Converging to result -->
+  <line x1="100" y1="210" x2="200" y2="260" stroke="#4dbfa8" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
+  <line x1="300" y1="210" x2="200" y2="260" stroke="#e879a0" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Result box -->
+  <rect x="130" y="260" width="140" height="50" rx="10" fill="#1e2840" stroke="#f0a500" stroke-width="2" filter="url(#glow)"/>
+  <rect x="148" y="274" width="60" height="6" rx="3" fill="#f0a500" opacity="0.6"/>
+  <rect x="148" y="286" width="100" height="5" rx="2.5" fill="#4a5568" opacity="0.5"/>
+  <rect x="148" y="296" width="80" height="4" rx="2" fill="#4a5568" opacity="0.3"/>
+  <!-- Sparkles -->
+  <circle cx="60" cy="80" r="2" fill="#f0a500" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="340" cy="100" r="1.5" fill="#4dbfa8" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="50" cy="260" r="1.5" fill="#6cb4e8" opacity="0.4" filter="url(#glow)"/>
+</svg>

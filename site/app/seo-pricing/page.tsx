@@ -32,7 +32,7 @@ export default function SEOPricingPage() {
             { label: "Free Tools", href: "/" },
             { label: "SEO Pricing Guide" },
           ]}
-          image={{ src: "/images/step3-pricing-guide.svg", alt: "SEO pricing guide illustration" }}
+          image={{ src: "/images/pricing-tiers.svg", alt: "SEO pricing tiers illustration" }}
         />
         <PricingGuide />
         <CTABanner

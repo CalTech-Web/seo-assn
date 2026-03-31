@@ -55,9 +55,9 @@ export default function LocalSEOGuidePage() {
             { label: "Learn SEO", href: "/" },
             { label: "Local SEO Guide" },
           ]}
-          image={{ src: "/images/guides-section.svg", alt: "Local SEO guide illustration" }}
+          image={{ src: "/images/local-map-pin.svg", alt: "Local SEO map pin illustration" }}
         />
-        <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -211,8 +211,8 @@ export default function LocalSEOGuidePage() {
               </p>
               <div className="not-prose mb-6 flex justify-center">
                 <Image
-                  src="/images/flat-about-trust-network.png"
-                  alt="Local market competition"
+                  src="/images/flat-guides-section.png"
+                  alt="Local SEO guide illustration"
                   width={360}
                   height={270}
                   className="w-full max-w-xs rounded-xl"

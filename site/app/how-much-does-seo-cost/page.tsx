@@ -80,7 +80,7 @@ export default function HowMuchDoesSEOCostPage() {
           ]}
           image={{ src: "/images/step3-pricing-guide.svg", alt: "SEO pricing illustration" }}
         />
-        <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
 
           <div className="prose max-w-none space-y-8">
             <section>
