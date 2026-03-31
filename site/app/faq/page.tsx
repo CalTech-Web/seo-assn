@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import FAQAccordion from "@/components/FAQAccordion";
 
@@ -86,21 +86,17 @@ export default function FAQPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="Frequently Asked Questions About SEO"
+          subtitle="Plain-English answers to the questions every small business owner asks about SEO."
+          breadcrumbs={[{ label: "FAQ" }]}
+        />
+
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb items={[{ label: "FAQ" }]} />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            Frequently Asked Questions About SEO
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            Plain-English answers to the questions every small business
-            owner asks about SEO.
-          </p>
-
           <FAQAccordion faqs={faqs} />
 
-          <div className="mt-12 bg-surface rounded-2xl p-8 text-center">
+          <div className="mt-12 gradient-border rounded-2xl p-8 text-center bg-white shadow-card">
             <h2 className="text-xl font-bold text-primary mb-3">
               Have a question we did not cover?
             </h2>
@@ -109,7 +105,7 @@ export default function FAQPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
+              className="btn-shimmer inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
             >
               Ask Us Anything
             </Link>

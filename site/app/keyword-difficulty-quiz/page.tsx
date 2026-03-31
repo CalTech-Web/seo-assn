@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import KeywordQuiz from "@/components/KeywordQuiz";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -26,15 +26,15 @@ export default function KeywordQuizPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 pt-8">
-          <Breadcrumb
-            items={[
-              { label: "Free Tools", href: "/" },
-              { label: "Keyword Difficulty Quiz" },
-            ]}
-          />
-        </div>
+      <main>
+        <PageHero
+          title="Keyword Difficulty Quiz"
+          subtitle="Answer 5 quick questions to find out how competitive your market is on Google. No technical knowledge needed."
+          breadcrumbs={[
+            { label: "Free Tools", href: "/" },
+            { label: "Keyword Difficulty Quiz" },
+          ]}
+        />
         <KeywordQuiz />
         <CTABanner
           title="Ready to See What SEO Costs?"

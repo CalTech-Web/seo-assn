@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import PricingGuide from "@/components/PricingGuide";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -24,15 +24,15 @@ export default function SEOPricingPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
-          <Breadcrumb
-            items={[
-              { label: "Free Tools", href: "/" },
-              { label: "SEO Pricing Guide" },
-            ]}
-          />
-        </div>
+      <main>
+        <PageHero
+          title="SEO Pricing Guide"
+          subtitle="Transparent SEO pricing for small businesses. Compare plans, see what is included, and find the right investment level for your market."
+          breadcrumbs={[
+            { label: "Free Tools", href: "/" },
+            { label: "SEO Pricing Guide" },
+          ]}
+        />
         <PricingGuide />
         <CTABanner
           title="Get a Personalized SEO Recommendation"

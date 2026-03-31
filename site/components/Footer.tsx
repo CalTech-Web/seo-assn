@@ -29,7 +29,9 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-dark text-white/70">
+    <footer className="relative bg-gradient-to-b from-primary to-primary-dark text-white/70">
+      {/* Accent top border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}

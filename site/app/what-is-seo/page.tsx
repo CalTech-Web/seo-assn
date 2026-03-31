@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
-import { Search, FileText, Link2, BarChart3, Globe, ArrowRight } from "lucide-react";
+import { Search, FileText, Link2, Globe, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "What Is SEO and How Does It Work? | The SEO Association",
@@ -26,24 +26,28 @@ const pillars = [
     title: "On-Page SEO",
     description:
       "Everything on your website that you control: page titles, headings, content quality, keywords, image descriptions, and URL structure. This is the foundation.",
+    accent: "from-emerald-400 to-emerald-500",
   },
   {
     icon: Search,
     title: "Technical SEO",
     description:
       "The behind-the-scenes stuff: how fast your site loads, whether it works on phones, if Google can actually find and read all your pages, and your site security (HTTPS).",
+    accent: "from-blue-400 to-blue-500",
   },
   {
     icon: Link2,
     title: "Off-Page SEO",
     description:
       "Signals from outside your website: other sites linking to you, your social media presence, directory listings, and online reviews. These build your reputation.",
+    accent: "from-purple-400 to-purple-500",
   },
   {
     icon: Globe,
     title: "Local SEO",
     description:
       "If you serve a specific area, this is critical: your Google Business Profile, local directory listings, reviews, and making sure your name, address, and phone number are consistent everywhere.",
+    accent: "from-amber-400 to-amber-500",
   },
 ];
 
@@ -51,24 +55,17 @@ export default function WhatIsSEOPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="What Is SEO and How Does It Work?"
+          subtitle="SEO stands for Search Engine Optimization. In plain English, it means making your website easier for Google to understand so it shows up when people search for what you sell or do."
+          breadcrumbs={[
+            { label: "Learn SEO", href: "/" },
+            { label: "What Is SEO?" },
+          ]}
+        />
+
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb
-            items={[
-              { label: "Learn SEO", href: "/" },
-              { label: "What Is SEO?" },
-            ]}
-          />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            What Is SEO and How Does It Work?
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            SEO stands for Search Engine Optimization. In plain English, it
-            means making your website easier for Google to understand so it
-            shows up when people search for what you sell or do.
-          </p>
-
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -130,10 +127,12 @@ export default function WhatIsSEOPage() {
                   return (
                     <div
                       key={pillar.title}
-                      className="bg-surface rounded-xl p-6 border border-border/50"
+                      className="relative bg-white rounded-xl p-6 border border-border/50 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 mb-3">
-                        <Icon className="h-5 w-5 text-primary" />
+                      {/* Gradient top border */}
+                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${pillar.accent}`} />
+                      <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${pillar.accent} mb-3 shadow-sm`}>
+                        <Icon className="h-5 w-5 text-white" />
                       </div>
                       <h3 className="font-bold text-primary mb-2">
                         {pillar.title}
@@ -181,7 +180,7 @@ export default function WhatIsSEOPage() {
               <div className="not-prose">
                 <Link
                   href="/seo-audit-checklist"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                 >
                   Take the Free SEO Audit
                   <ArrowRight className="h-5 w-5" />

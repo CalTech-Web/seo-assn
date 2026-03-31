@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | The SEO Association",
@@ -9,18 +11,17 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 py-20">
-        <Link
-          href="/"
-          className="text-sm text-accent-dark hover:text-accent font-medium mb-8 inline-block"
-        >
-          &larr; Back to Home
-        </Link>
+    <>
+      <Header />
+      <main>
+        <PageHero
+          title="Privacy Policy"
+          subtitle="How we collect, use, and protect your information."
+          breadcrumbs={[{ label: "Privacy Policy" }]}
+        />
 
-        <h1 className="text-4xl font-bold text-primary mb-8">Privacy Policy</h1>
-
-        <div className="prose prose-slate max-w-none space-y-6 text-text-muted leading-relaxed">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+          <div className="prose prose-slate max-w-none space-y-6 text-text-muted leading-relaxed">
           <p>
             <strong>Last updated:</strong> March 30, 2026
           </p>
@@ -101,8 +102,10 @@ export default function PrivacyPolicy() {
             </a>
             .
           </p>
+          </div>
         </div>
-      </div>
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }

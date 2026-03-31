@@ -15,8 +15,11 @@ export default function RelatedLinks({
   links: RelatedLink[];
 }) {
   return (
-    <section className="py-16 bg-surface">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+    <section className="relative py-16 bg-gradient-to-b from-surface to-white overflow-hidden">
+      {/* Subtle decorative orb */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 bg-accent/5 rounded-full blur-3xl" />
+
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
         <h2 className="text-2xl font-bold text-primary mb-8 text-center">
           {title}
         </h2>
@@ -25,8 +28,10 @@ export default function RelatedLinks({
             <Link
               key={link.href}
               href={link.href}
-              className="group bg-white rounded-xl border border-border/50 p-6 hover:border-accent/30 hover:shadow-md transition-all"
+              className="group relative bg-white rounded-xl border border-border/50 p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
             >
+              {/* Gradient top border accent */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-accent-light opacity-0 group-hover:opacity-100 transition-opacity" />
               <h3 className="font-bold text-primary mb-2 group-hover:text-accent-dark transition-colors">
                 {link.title}
               </h3>

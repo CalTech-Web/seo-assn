@@ -115,6 +115,15 @@ const stats = [
   },
 ];
 
+const articleAccents = [
+  "from-amber-400 to-amber-500",
+  "from-blue-400 to-blue-500",
+  "from-emerald-400 to-emerald-500",
+  "from-purple-400 to-purple-500",
+  "from-rose-400 to-rose-500",
+  "from-cyan-400 to-cyan-500",
+];
+
 export default function Home() {
   return (
     <>
@@ -123,8 +132,10 @@ export default function Home() {
         <HeroSection />
 
         {/* Why SEO Matters */}
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <section className="relative py-20 bg-white overflow-hidden">
+          {/* Decorative orb */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
             <div className="text-center mb-14">
               <h2 className="text-3xl sm:text-4xl font-bold text-primary">
                 Why SEO Matters for Small Businesses
@@ -138,9 +149,9 @@ export default function Home() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="text-center p-6 rounded-2xl bg-surface"
+                  className="gradient-border text-center p-6 rounded-2xl bg-white shadow-card"
                 >
-                  <div className="text-3xl sm:text-4xl font-bold text-accent-dark mb-2">
+                  <div className="text-3xl sm:text-4xl font-bold gradient-text mb-2">
                     {stat.number}
                   </div>
                   <p className="text-sm text-text-muted">{stat.label}</p>
@@ -151,10 +162,19 @@ export default function Home() {
         </section>
 
         {/* Free Tools */}
-        <section className="py-20 bg-surface">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <section className="relative py-20 bg-gradient-to-b from-surface to-white overflow-hidden">
+          {/* Dot pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, var(--color-primary) 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
+            }}
+          />
+          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent-dark text-sm font-semibold mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-accent/15 to-accent-light/15 text-accent-dark text-sm font-semibold mb-4 border border-accent/20">
                 Free Tools
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-primary">
@@ -172,16 +192,16 @@ export default function Home() {
                   <Link
                     key={tool.href}
                     href={tool.href}
-                    className={`group rounded-2xl border-2 p-6 sm:p-8 transition-all hover:shadow-lg hover:-translate-y-1 ${tool.color}`}
+                    className={`group relative rounded-2xl border-2 p-6 sm:p-8 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 ${tool.color}`}
                   >
                     <div className="flex items-start gap-4">
                       <div
-                        className={`flex h-12 w-12 items-center justify-center rounded-xl shrink-0 ${tool.iconColor}`}
+                        className={`flex h-12 w-12 items-center justify-center rounded-xl shrink-0 ${tool.iconColor} shadow-sm`}
                       >
                         <Icon className="h-6 w-6" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+                        <span className="inline-block px-2 py-0.5 rounded text-xs font-semibold text-text-muted uppercase tracking-wider bg-white/60">
                           {tool.step}
                         </span>
                         <h3 className="text-xl font-bold text-primary mt-1 mb-2 group-hover:text-accent-dark transition-colors">
@@ -192,7 +212,7 @@ export default function Home() {
                         </p>
                         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark group-hover:gap-2.5 transition-all">
                           Try it free
-                          <ArrowRight className="h-4 w-4" />
+                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </span>
                       </div>
                     </div>
@@ -204,9 +224,28 @@ export default function Home() {
         </section>
 
         {/* Trust Section */}
-        <section className="py-20 bg-primary text-white">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
-            <Shield className="h-12 w-12 text-accent mx-auto mb-6" />
+        <section className="relative py-20 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white">
+          {/* Gradient orbs like hero */}
+          <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div
+            className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
+            style={{ animationDelay: "1.5s" }}
+          />
+          {/* Dot pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, white 1px, transparent 1px)",
+              backgroundSize: "24px 24px",
+            }}
+          />
+
+          <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center">
+            <div className="relative inline-flex items-center justify-center mb-6">
+              <div className="absolute inset-0 w-16 h-16 rounded-full bg-accent/20 blur-xl mx-auto" />
+              <Shield className="relative h-12 w-12 text-accent" />
+            </div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Honest SEO Education, Backed by Real Experts
             </h2>
@@ -216,7 +255,7 @@ export default function Home() {
               businesses. We created these free tools because we believe
               informed clients make the best clients.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
               {[
                 "No pushy sales tactics",
                 "Transparent pricing always",
@@ -224,10 +263,10 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-2 justify-center text-white/80"
+                  className="flex items-center gap-2 justify-center px-4 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                 >
                   <CheckCircle2 className="h-5 w-5 text-accent shrink-0" />
-                  <span className="text-sm font-medium">{item}</span>
+                  <span className="text-sm font-medium text-white/80">{item}</span>
                 </div>
               ))}
             </div>
@@ -238,7 +277,7 @@ export default function Home() {
         <section className="py-20 bg-white">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-sm font-semibold mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-sm font-semibold mb-4 border border-primary/10">
                 Learn SEO
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-primary">
@@ -250,16 +289,20 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {articles.map((article) => {
+              {articles.map((article, idx) => {
                 const Icon = article.icon;
                 return (
                   <Link
                     key={article.href}
                     href={article.href}
-                    className="group bg-surface rounded-xl border border-border/50 p-6 hover:border-accent/30 hover:shadow-md transition-all"
+                    className="group relative bg-white rounded-xl border border-border/50 p-6 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/5 mb-4">
-                      <Icon className="h-5 w-5 text-primary" />
+                    {/* Gradient top accent bar */}
+                    <div
+                      className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${articleAccents[idx]} opacity-60 group-hover:opacity-100 transition-opacity`}
+                    />
+                    <div className={`flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br ${articleAccents[idx]} mb-4 shadow-sm`}>
+                      <Icon className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="font-bold text-primary mb-2 group-hover:text-accent-dark transition-colors">
                       {article.title}
@@ -279,8 +322,14 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-accent/10">
-          <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
+        <section className="relative py-20 overflow-hidden bg-gradient-to-br from-amber-50 via-accent/10 to-amber-50/50">
+          {/* Decorative orbs */}
+          <div className="absolute top-0 right-1/4 w-64 h-64 bg-accent/15 rounded-full blur-3xl animate-pulse-slow" />
+          <div
+            className="absolute bottom-0 left-1/4 w-48 h-48 bg-amber-300/20 rounded-full blur-3xl animate-pulse-slow"
+            style={{ animationDelay: "1.5s" }}
+          />
+          <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               Ready to Find Out Where You Stand?
             </h2>
@@ -292,14 +341,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/seo-audit-checklist"
-                className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
               >
                 Start the SEO Audit
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 href="/get-started"
-                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
+                className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
               >
                 Get a Free Strategy Call
               </Link>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import { Shield, Heart, Eye, ArrowRight, ExternalLink } from "lucide-react";
 
@@ -44,19 +44,14 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="About The SEO Association"
+          subtitle="We are a free educational resource for small business owners who want to understand SEO without the jargon, pressure, or guesswork."
+          breadcrumbs={[{ label: "About" }]}
+        />
+
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb items={[{ label: "About" }]} />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            About The SEO Association
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            We are a free educational resource for small business owners who
-            want to understand SEO without the jargon, pressure, or
-            guesswork.
-          </p>
-
           <div className="space-y-10">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -94,9 +89,11 @@ export default function AboutPage() {
                   return (
                     <div
                       key={value.title}
-                      className="bg-surface rounded-xl p-6 border border-border/50 flex gap-4"
+                      className="relative bg-white rounded-xl p-6 border border-border/50 flex gap-4 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 shrink-0">
+                      {/* Gradient left border */}
+                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-accent to-accent-light rounded-l-xl" />
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent/15 to-accent-light/15 shrink-0 border border-accent/20">
                         <Icon className="h-5 w-5 text-accent-dark" />
                       </div>
                       <div>
@@ -114,35 +111,42 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Powered by CalTech Web
-              </h2>
-              <p className="text-text-muted leading-relaxed mb-4">
-                The SEO Association is powered by{" "}
-                <a
-                  href="https://caltechweb.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent-dark hover:text-accent font-medium inline-flex items-center gap-1"
-                >
-                  CalTech Web
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
-                , a professional web design and SEO company that builds
-                websites and grows online visibility for small businesses
-                across the country.
-              </p>
-              <p className="text-text-muted leading-relaxed mb-4">
-                CalTech Web is the recommended in-house SEO partner
-                throughout this site. When you use our brief generator and
-                opt in, your project details go directly to the CalTech Web
-                team for a free, no-pressure strategy call.
-              </p>
-              <p className="text-text-muted leading-relaxed">
-                But let us be clear: you do not have to work with CalTech
-                Web to benefit from this site. The tools and guides are
-                useful regardless of who (if anyone) you hire for SEO.
-              </p>
+              <div className="relative rounded-2xl p-8 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+                {/* Decorative orbs */}
+                <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="relative z-10">
+                  <h2 className="text-2xl font-bold text-white mb-4">
+                    Powered by CalTech Web
+                  </h2>
+                  <p className="text-white/70 leading-relaxed mb-4">
+                    The SEO Association is powered by{" "}
+                    <a
+                      href="https://caltechweb.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent-light font-medium inline-flex items-center gap-1"
+                    >
+                      CalTech Web
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                    , a professional web design and SEO company that builds
+                    websites and grows online visibility for small businesses
+                    across the country.
+                  </p>
+                  <p className="text-white/70 leading-relaxed mb-4">
+                    CalTech Web is the recommended in-house SEO partner
+                    throughout this site. When you use our brief generator and
+                    opt in, your project details go directly to the CalTech Web
+                    team for a free, no-pressure strategy call.
+                  </p>
+                  <p className="text-white/70 leading-relaxed">
+                    But let us be clear: you do not have to work with CalTech
+                    Web to benefit from this site. The tools and guides are
+                    useful regardless of who (if anyone) you hire for SEO.
+                  </p>
+                </div>
+              </div>
             </section>
 
             <section>
@@ -156,14 +160,14 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                 >
                   Contact Us
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <Link
                   href="/get-started"
-                  className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
                 >
                   Get a Free Strategy Call
                 </Link>

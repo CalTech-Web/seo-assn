@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import { Mail, ArrowRight, ExternalLink, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,78 +22,85 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="Get in Touch"
+          subtitle="Have a question about SEO? Want to discuss your business situation? We are happy to help, no sales pitch required."
+          breadcrumbs={[{ label: "Contact" }]}
+        />
+
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb items={[{ label: "Contact" }]} />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            Have a question about SEO? Want to discuss your business
-            situation? We are happy to help, no sales pitch required.
-          </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             <Link
               href="/get-started"
-              className="group bg-accent/5 rounded-2xl border-2 border-accent/20 p-6 hover:border-accent/40 hover:shadow-lg transition-all"
+              className="group relative bg-gradient-to-br from-amber-50/80 to-accent/5 rounded-2xl border-2 border-accent/20 p-6 hover:border-accent/40 hover:shadow-card-hover transition-all duration-300 overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 mb-4">
-                <MessageSquare className="h-6 w-6 text-accent-dark" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
+              <div className="relative z-10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-accent/15 to-accent-light/15 mb-4 border border-accent/20">
+                  <MessageSquare className="h-6 w-6 text-accent-dark" />
+                </div>
+                <h2 className="text-lg font-bold text-primary mb-2 group-hover:text-accent-dark transition-colors">
+                  Free Strategy Call
+                </h2>
+                <p className="text-sm text-text-muted mb-4 leading-relaxed">
+                  Build your SEO brief and get a personalized strategy
+                  consultation from CalTech Web. No commitment, no pressure.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark group-hover:gap-2.5 transition-all">
+                  Build your SEO brief
+                  <ArrowRight className="h-4 w-4" />
+                </span>
               </div>
-              <h2 className="text-lg font-bold text-primary mb-2 group-hover:text-accent-dark transition-colors">
-                Free Strategy Call
-              </h2>
-              <p className="text-sm text-text-muted mb-4 leading-relaxed">
-                Build your SEO brief and get a personalized strategy
-                consultation from CalTech Web. No commitment, no pressure.
-              </p>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-dark group-hover:gap-2.5 transition-all">
-                Build your SEO brief
-                <ArrowRight className="h-4 w-4" />
-              </span>
             </Link>
 
             <a
               href="mailto:saif@caltechweb.com"
-              className="group bg-surface rounded-2xl border-2 border-border/50 p-6 hover:border-primary/20 hover:shadow-lg transition-all"
+              className="group relative bg-gradient-to-br from-slate-50/80 to-primary/5 rounded-2xl border-2 border-border/50 p-6 hover:border-primary/20 hover:shadow-card-hover transition-all duration-300 overflow-hidden"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 mb-4">
-                <Mail className="h-6 w-6 text-primary" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl" />
+              <div className="relative z-10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary-light/10 mb-4 border border-primary/10">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <h2 className="text-lg font-bold text-primary mb-2 group-hover:text-accent-dark transition-colors">
+                  Email Us
+                </h2>
+                <p className="text-sm text-text-muted mb-4 leading-relaxed">
+                  Send us your question directly and we will get back to you
+                  within 1 business day.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
+                  saif@caltechweb.com
+                  <ArrowRight className="h-4 w-4" />
+                </span>
               </div>
-              <h2 className="text-lg font-bold text-primary mb-2 group-hover:text-accent-dark transition-colors">
-                Email Us
-              </h2>
-              <p className="text-sm text-text-muted mb-4 leading-relaxed">
-                Send us your question directly and we will get back to you
-                within 1 business day.
-              </p>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all">
-                saif@caltechweb.com
-                <ArrowRight className="h-4 w-4" />
-              </span>
             </a>
           </div>
 
-          <div className="bg-primary rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-3">
-              Powered by CalTech Web
-            </h2>
-            <p className="text-white/70 mb-6 max-w-lg mx-auto">
-              The SEO Association is a free educational resource by CalTech
-              Web, a professional web design and SEO company helping small
-              businesses grow online.
-            </p>
-            <a
-              href="https://caltechweb.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
-            >
-              Visit CalTech Web
-              <ExternalLink className="h-4 w-4" />
-            </a>
+          <div className="relative rounded-2xl p-8 text-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+            {/* Decorative orbs */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/8 rounded-full blur-3xl" />
+            <div className="relative z-10">
+              <h2 className="text-2xl font-bold text-white mb-3">
+                Powered by CalTech Web
+              </h2>
+              <p className="text-white/70 mb-6 max-w-lg mx-auto">
+                The SEO Association is a free educational resource by CalTech
+                Web, a professional web design and SEO company helping small
+                businesses grow online.
+              </p>
+              <a
+                href="https://caltechweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
+              >
+                Visit CalTech Web
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </main>

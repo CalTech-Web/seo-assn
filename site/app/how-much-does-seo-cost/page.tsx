@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
 import { ArrowRight, AlertTriangle, CheckCircle2 } from "lucide-react";
@@ -69,23 +69,16 @@ export default function HowMuchDoesSEOCostPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="How Much Does SEO Cost in 2026?"
+          subtitle="The answer depends on your market, goals, and starting point. But here are real numbers you can use to plan, not vague ranges or sales-driven estimates."
+          breadcrumbs={[
+            { label: "Learn SEO", href: "/" },
+            { label: "How Much Does SEO Cost?" },
+          ]}
+        />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb
-            items={[
-              { label: "Learn SEO", href: "/" },
-              { label: "How Much Does SEO Cost?" },
-            ]}
-          />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            How Much Does SEO Cost in 2026?
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            The answer depends on your market, goals, and starting point. But
-            here are real numbers you can use to plan, not vague ranges or
-            sales-driven estimates.
-          </p>
 
           <div className="prose max-w-none space-y-8">
             <section>
@@ -208,7 +201,7 @@ export default function HowMuchDoesSEOCostPage() {
               <div className="not-prose">
                 <Link
                   href="/seo-pricing"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5 btn-shimmer"
                 >
                   View Interactive Pricing Guide
                   <ArrowRight className="h-5 w-5" />

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
 import { Clock, ArrowRight } from "lucide-react";
@@ -84,24 +84,16 @@ export default function HowLongDoesSEOTakePage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="How Long Does SEO Take to Work?"
+          subtitle="The honest answer: most businesses see meaningful results in 3 to 6 months, with full impact in 6 to 12 months. Here is why, and what to expect along the way."
+          breadcrumbs={[
+            { label: "Learn SEO", href: "/" },
+            { label: "How Long Does SEO Take?" },
+          ]}
+        />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb
-            items={[
-              { label: "Learn SEO", href: "/" },
-              { label: "How Long Does SEO Take?" },
-            ]}
-          />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            How Long Does SEO Take to Work?
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            The honest answer: most businesses see meaningful results in 3 to
-            6 months, with full impact in 6 to 12 months. Here is why, and
-            what to expect along the way.
-          </p>
-
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -246,7 +238,7 @@ export default function HowLongDoesSEOTakePage() {
               <div className="not-prose">
                 <Link
                   href="/seo-audit-checklist"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                 >
                   Check Your SEO Right Now
                   <ArrowRight className="h-5 w-5" />

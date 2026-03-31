@@ -117,7 +117,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showTransparent
           ? "bg-transparent"
-          : "bg-white/95 backdrop-blur-md shadow-sm"
+          : "bg-white/95 backdrop-blur-md border-b border-border/30 shadow-[0_1px_3px_rgba(0,0,0,0.04),0_4px_12px_rgba(0,0,0,0.03)]"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

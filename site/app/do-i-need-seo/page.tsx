@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
 import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
@@ -40,23 +40,16 @@ export default function DoINeedSEOPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="Do I Need SEO for My Small Business?"
+          subtitle="The short answer: probably yes, but it depends on your situation. Here is the honest breakdown so you can decide for yourself."
+          breadcrumbs={[
+            { label: "Learn SEO", href: "/" },
+            { label: "Do I Need SEO?" },
+          ]}
+        />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb
-            items={[
-              { label: "Learn SEO", href: "/" },
-              { label: "Do I Need SEO?" },
-            ]}
-          />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            Do I Need SEO for My Small Business?
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            The short answer: probably yes, but it depends on your situation.
-            Here is the honest breakdown so you can decide for yourself.
-          </p>
-
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -166,14 +159,14 @@ export default function DoINeedSEOPage() {
               <div className="not-prose flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/seo-audit-checklist"
-                  className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                 >
                   Check My Website
                   <ArrowRight className="h-5 w-5" />
                 </Link>
                 <Link
                   href="/seo-pricing"
-                  className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
                 >
                   See Pricing Options
                 </Link>

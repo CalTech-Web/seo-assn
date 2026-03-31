@@ -9,7 +9,7 @@ interface BreadcrumbItem {
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex items-center gap-1.5 text-sm text-text-muted flex-wrap">
+      <ol className="inline-flex items-center gap-1.5 text-sm text-text-muted flex-wrap px-3 py-1.5 rounded-full bg-surface/80 backdrop-blur-sm border border-border/30">
         <li>
           <Link href="/" className="hover:text-primary transition-colors">
             Home
@@ -17,7 +17,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         </li>
         {items.map((item, idx) => (
           <li key={idx} className="flex items-center gap-1.5">
-            <ChevronRight className="h-3.5 w-3.5" />
+            <ChevronRight className="h-3.5 w-3.5 text-accent-dark/50" />
             {item.href ? (
               <Link
                 href={item.href}

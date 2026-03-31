@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
 import { MapPin, Star, Building2, Globe, Phone, ArrowRight, CheckCircle2 } from "lucide-react";
@@ -46,24 +46,16 @@ export default function LocalSEOGuidePage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
+      <main>
+        <PageHero
+          title="Local SEO: The Complete Guide for Small Businesses"
+          subtitle="If your customers come from a specific area, local SEO is the single most impactful thing you can do for your online presence. Here is everything you need to know."
+          breadcrumbs={[
+            { label: "Learn SEO", href: "/" },
+            { label: "Local SEO Guide" },
+          ]}
+        />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
-          <Breadcrumb
-            items={[
-              { label: "Learn SEO", href: "/" },
-              { label: "Local SEO Guide" },
-            ]}
-          />
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
-            Local SEO: The Complete Guide for Small Businesses
-          </h1>
-          <p className="text-lg text-text-muted mb-10 leading-relaxed">
-            If your customers come from a specific area, local SEO is the
-            single most impactful thing you can do for your online presence.
-            Here is everything you need to know.
-          </p>
-
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -218,7 +210,7 @@ export default function LocalSEOGuidePage() {
               <div className="not-prose">
                 <Link
                   href="/keyword-difficulty-quiz"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                 >
                   Check Your Market Competition
                   <ArrowRight className="h-5 w-5" />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import AuditChecklist from "@/components/AuditChecklist";
 import CTABanner from "@/components/CTABanner";
 import RelatedLinks from "@/components/RelatedLinks";
@@ -23,15 +23,15 @@ export default function SEOAuditPage() {
   return (
     <>
       <Header />
-      <main className="pt-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 pt-8">
-          <Breadcrumb
-            items={[
-              { label: "Free Tools", href: "/" },
-              { label: "SEO Audit Checklist" },
-            ]}
-          />
-        </div>
+      <main>
+        <PageHero
+          title="SEO Audit Checklist"
+          subtitle="Score your website across 25 SEO factors in 5 categories. Free, no tools needed, just honest yes or no answers."
+          breadcrumbs={[
+            { label: "Free Tools", href: "/" },
+            { label: "SEO Audit Checklist" },
+          ]}
+        />
         <AuditChecklist />
         <CTABanner
           title="Know Your Score? Find Out if You Can Rank"
