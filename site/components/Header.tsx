@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const toolLinks = [
   { label: "SEO Audit Checklist", href: "/seo-audit-checklist" },
@@ -122,9 +123,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-white">
-              <Search className="h-5 w-5" />
-            </div>
+            <Image src="/logo.svg" alt="The SEO Association" width={36} height={36} className="h-9 w-9" />
             <span
               className={`text-lg font-bold transition-colors ${
                 showTransparent ? "text-white" : "text-primary"

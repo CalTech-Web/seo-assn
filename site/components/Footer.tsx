@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Search, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const toolLinks = [
   { label: "SEO Audit Checklist", href: "/seo-audit-checklist" },
@@ -34,9 +35,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10">
-                <Search className="h-4 w-4 text-accent" />
-              </div>
+              <Image src="/logo.svg" alt="The SEO Association" width={32} height={32} className="h-8 w-8 brightness-0 invert" />
               <span className="text-lg font-bold text-white">
                 The SEO Association
               </span>
