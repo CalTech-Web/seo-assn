@@ -161,7 +161,7 @@ export default function KeywordQuiz() {
 
   return (
     <section id="quiz" className="py-20 lg:py-28 bg-surface">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent-dark text-sm font-semibold mb-4">
             Step 2

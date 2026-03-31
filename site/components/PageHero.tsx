@@ -22,7 +22,7 @@ export default function PageHero({
   image,
 }: PageHeroProps) {
   return (
-    <section className="relative pt-28 pb-20 min-h-[340px] overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+    <section className="relative pt-[187px] pb-20 min-h-[340px] overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
       {/* Decorative orbs */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
       <div
@@ -39,7 +39,7 @@ export default function PageHero({
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <div className={`flex flex-col ${image ? "lg:flex-row lg:items-center lg:gap-12" : ""}`}>
           <div className={image ? "flex-1" : "max-w-3xl"}>
             <div className="mb-4">

@@ -53,7 +53,7 @@ export default function AboutPage() {
           image={{ src: "/images/about-trust-network.svg", alt: "Trust network illustration" }}
         />
 
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="space-y-10">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">

@@ -101,7 +101,7 @@ export default function HowToRankPage() {
           ]}
           image={{ src: "/images/step1-audit-checklist.svg", alt: "Google ranking checklist illustration" }}
         />
-        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-10">
             {steps.map((step) => (
               <section key={step.number}>
@@ -124,39 +124,47 @@ export default function HowToRankPage() {
               </section>
             ))}
 
-            <section>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Where to Start Right Now
-              </h2>
-              <p className="text-text-muted leading-relaxed mb-6">
-                If this feels overwhelming, start with Step 1. Take our free
-                SEO audit checklist to see where your website stands right
-                now. It covers all the factors we discussed above and gives
-                you a clear score in less than 5 minutes.
-              </p>
-              <div className="not-prose mb-6 flex justify-center">
-                <Image
-                  src="/images/flat-step4-brief-generator.png"
-                  alt="SEO brief generator preview"
-                  width={360}
-                  height={270}
-                  className="w-full max-w-xs rounded-xl"
-                />
-              </div>
-              <div className="not-prose flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/seo-audit-checklist"
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
-                >
-                  Take the Free SEO Audit
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="/get-started"
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
-                >
-                  Get Expert Help
-                </Link>
+            <section className="not-prose">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+                  <div className="shrink-0">
+                    <Image
+                      src="/images/flat-step4-brief-generator.png"
+                      alt="SEO brief generator preview"
+                      width={360}
+                      height={270}
+                      className="w-64 lg:w-72 rounded-xl shadow-2xl"
+                    />
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                      Where to Start Right Now
+                    </h2>
+                    <p className="text-white/70 leading-relaxed mb-6">
+                      If this feels overwhelming, start with Step 1. Take our free
+                      SEO audit checklist to see where your website stands right
+                      now. It covers all the factors we discussed above and gives
+                      you a clear score in less than 5 minutes.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                      <Link
+                        href="/seo-audit-checklist"
+                        className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                      >
+                        Take the Free SEO Audit
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                      <Link
+                        href="/get-started"
+                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-6 py-3 rounded-xl backdrop-blur-sm border border-white/10 transition-all hover:-translate-y-0.5"
+                      >
+                        Get a Free Strategy Call
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>

@@ -94,7 +94,7 @@ export default function FAQPage() {
           image={{ src: "/images/guides-section.svg", alt: "SEO guides illustration" }}
         />
 
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <FAQAccordion faqs={faqs} />
 
           <div className="mt-12 gradient-border rounded-2xl p-8 text-center bg-white shadow-card">

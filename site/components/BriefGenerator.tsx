@@ -293,7 +293,7 @@ export default function BriefGenerator() {
   if (submitted) {
     return (
       <section id="brief" className="py-20 lg:py-28 bg-surface">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 text-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -324,7 +324,7 @@ export default function BriefGenerator() {
 
   return (
     <section id="brief" className="py-20 lg:py-28 bg-surface">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent-dark text-sm font-semibold mb-4">
             Step 4

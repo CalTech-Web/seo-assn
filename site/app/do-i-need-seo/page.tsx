@@ -51,7 +51,7 @@ export default function DoINeedSEOPage() {
           ]}
           image={{ src: "/images/decision-path.svg", alt: "Decision path illustration" }}
         />
-        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -141,46 +141,49 @@ export default function DoINeedSEOPage() {
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Start Small, Start Smart
-              </h2>
-              <p className="text-text-muted leading-relaxed mb-4">
-                You do not need to commit to a big SEO campaign to get
-                started. Here is a practical first step: take our free SEO
-                audit checklist. It takes less than 5 minutes, costs nothing,
-                and shows you exactly where your website stands across 25
-                important SEO factors.
-              </p>
-              <p className="text-text-muted leading-relaxed mb-6">
-                From there, you can decide whether to tackle the fixes
-                yourself, hire help, or start with a one-time SEO audit from
-                CalTech Web (starting at $300, credited toward any ongoing
-                plan).
-              </p>
-              <div className="not-prose mb-6 flex justify-center">
-                <Image
-                  src="/images/flat-step2-keyword-difficulty.png"
-                  alt="Keyword difficulty assessment"
-                  width={360}
-                  height={270}
-                  className="w-full max-w-xs rounded-xl"
-                />
-              </div>
-              <div className="not-prose flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/seo-audit-checklist"
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
-                >
-                  Check My Website
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="/seo-pricing"
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
-                >
-                  See Pricing Options
-                </Link>
+            <section className="not-prose">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+                  <div className="shrink-0">
+                    <Image
+                      src="/images/flat-step2-keyword-difficulty.png"
+                      alt="Keyword difficulty assessment"
+                      width={360}
+                      height={270}
+                      className="w-64 lg:w-72 rounded-xl shadow-2xl"
+                    />
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                      The Smart Way to Decide
+                    </h2>
+                    <p className="text-white/70 leading-relaxed mb-6">
+                      The most efficient way to find out is to take our free SEO audit
+                      checklist. It takes less than 5 minutes and evaluates your website
+                      across 25 important SEO factors. From there, you can decide whether
+                      to tackle the fixes yourself, hire help, or start with a one-time
+                      SEO audit from CalTech Web (starting at $300, credited toward any
+                      ongoing plan).
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                      <Link
+                        href="/seo-audit-checklist"
+                        className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                      >
+                        Check My Website
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                      <Link
+                        href="/seo-pricing"
+                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-6 py-3 rounded-xl backdrop-blur-sm border border-white/10 transition-all hover:-translate-y-0.5"
+                      >
+                        See Pricing Options
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>

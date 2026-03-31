@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           breadcrumbs={[{ label: "Privacy Policy" }]}
         />
 
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="prose prose-slate max-w-none space-y-6 text-text-muted leading-relaxed">
           <p>
             <strong>Last updated:</strong> March 30, 2026

@@ -80,7 +80,7 @@ export default function HowMuchDoesSEOCostPage() {
           ]}
           image={{ src: "/images/step3-pricing-guide.svg", alt: "SEO pricing illustration" }}
         />
-        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
 
           <div className="prose max-w-none space-y-8">
             <section>
@@ -193,30 +193,42 @@ export default function HowMuchDoesSEOCostPage() {
                 people who find you through Google are 8 times more likely to
                 become customers than people you cold-call or cold-email.
               </p>
-              <p className="text-text-muted leading-relaxed mb-6">
-                The key is choosing the right level of investment for your
-                market. A local bakery does not need a $5,000/month campaign.
-                A law firm competing in a major metro area probably does. Our
-                interactive pricing guide can help you see which tier matches
-                your situation.
-              </p>
-              <div className="not-prose mb-6 flex justify-center">
-                <Image
-                  src="/images/flat-step3-pricing-guide.png"
-                  alt="SEO pricing guide preview"
-                  width={360}
-                  height={270}
-                  className="w-full max-w-xs rounded-xl"
-                />
-              </div>
-              <div className="not-prose">
-                <Link
-                  href="/seo-pricing"
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5 btn-shimmer"
-                >
-                  View Interactive Pricing Guide
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+            </section>
+
+            <section className="not-prose">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+                  <div className="shrink-0">
+                    <Image
+                      src="/images/flat-step3-pricing-guide.png"
+                      alt="SEO pricing guide preview"
+                      width={360}
+                      height={270}
+                      className="w-64 lg:w-72 rounded-xl shadow-2xl"
+                    />
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                      Find the Right Investment Level
+                    </h2>
+                    <p className="text-white/70 leading-relaxed mb-6">
+                      The key is choosing the right level of investment for your
+                      market. A local bakery does not need a $5,000/month campaign.
+                      A law firm competing in a major metro area probably does. Our
+                      interactive pricing guide can help you see which tier matches
+                      your situation.
+                    </p>
+                    <Link
+                      href="/seo-pricing"
+                      className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                    >
+                      View Interactive Pricing Guide
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </section>
           </div>

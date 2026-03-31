@@ -67,7 +67,7 @@ export default function WhatIsSEOPage() {
           image={{ src: "/images/seo-explained.svg", alt: "SEO explained illustration" }}
         />
 
-        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -168,34 +168,40 @@ export default function WhatIsSEOPage() {
               </p>
             </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                How to Get Started with SEO
-              </h2>
-              <p className="text-text-muted leading-relaxed mb-4">
-                The first step is understanding where you stand right now. You
-                do not need expensive tools or technical knowledge to start.
-                Our free SEO audit checklist walks you through 25 key factors
-                so you can see exactly what is working and what needs
-                attention.
-              </p>
-              <div className="not-prose mb-6 flex justify-center">
-                <Image
-                  src="/images/flat-step1-audit-checklist.png"
-                  alt="SEO audit checklist preview"
-                  width={360}
-                  height={270}
-                  className="w-full max-w-xs rounded-xl"
-                />
-              </div>
-              <div className="not-prose">
-                <Link
-                  href="/seo-audit-checklist"
-                  className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
-                >
-                  Take the Free SEO Audit
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+            <section className="not-prose">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+                  <div className="shrink-0">
+                    <Image
+                      src="/images/flat-step1-audit-checklist.png"
+                      alt="SEO audit checklist preview"
+                      width={360}
+                      height={270}
+                      className="w-64 lg:w-72 rounded-xl shadow-2xl"
+                    />
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                      How to Get Started with SEO
+                    </h2>
+                    <p className="text-white/70 leading-relaxed mb-6">
+                      The first step is understanding where you stand right now. You
+                      do not need expensive tools or technical knowledge to start.
+                      Our free SEO audit checklist walks you through 25 key factors
+                      so you can see exactly what is working and what needs
+                      attention.
+                    </p>
+                    <Link
+                      href="/seo-audit-checklist"
+                      className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                    >
+                      Take the Free SEO Audit
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </section>
           </div>

@@ -95,7 +95,7 @@ export default function HowLongDoesSEOTakePage() {
           ]}
           image={{ src: "/images/timeline-growth.svg", alt: "SEO timeline growth illustration" }}
         />
-        <article className="mx-auto max-w-5xl px-4 sm:px-6 py-12">
+        <article className="mx-auto max-w-7xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-primary mb-4">
@@ -232,28 +232,41 @@ export default function HowLongDoesSEOTakePage() {
                   (are more people seeing your listing?)
                 </li>
               </ul>
-              <p className="text-text-muted leading-relaxed mt-4 mb-6">
-                If you are not seeing any movement after 4 to 5 months, it is
-                worth asking your SEO provider what is happening. Results
-                should not take forever.
-              </p>
-              <div className="not-prose mb-6 flex justify-center">
-                <Image
-                  src="/images/flat-cta-magnifier-growth.png"
-                  alt="SEO growth and progress"
-                  width={360}
-                  height={270}
-                  className="w-full max-w-xs rounded-xl"
-                />
-              </div>
-              <div className="not-prose">
-                <Link
-                  href="/seo-audit-checklist"
-                  className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
-                >
-                  Check Your SEO Right Now
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+            </section>
+
+            <section className="not-prose">
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
+                  <div className="shrink-0">
+                    <Image
+                      src="/images/flat-cta-magnifier-growth.png"
+                      alt="SEO growth and progress"
+                      width={360}
+                      height={270}
+                      className="w-64 lg:w-72 rounded-xl shadow-2xl"
+                    />
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+                      Start Tracking Your Progress Today
+                    </h2>
+                    <p className="text-white/70 leading-relaxed mb-6">
+                      If you are not seeing any movement after 4 to 5 months, it is
+                      worth asking your SEO provider what is happening. Results
+                      should not take forever. Take our free audit to see where you
+                      stand right now.
+                    </p>
+                    <Link
+                      href="/seo-audit-checklist"
+                      className="btn-shimmer inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                    >
+                      Check Your SEO Right Now
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </section>
           </div>

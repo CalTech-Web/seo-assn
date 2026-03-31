@@ -19,7 +19,7 @@ export default function RelatedLinks({
       {/* Subtle decorative orb */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 bg-accent/5 rounded-full blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <h2 className="text-2xl font-bold text-primary mb-8 text-center">
           {title}
         </h2>
