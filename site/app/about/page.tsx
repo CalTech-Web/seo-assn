@@ -115,9 +115,9 @@ export default function AboutPage() {
             <section className="not-prose">
               <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-12">
                 {/* Decorative orbs */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "1.5s" }} />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+                <div className="absolute bottom-0 left-0 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "1.5s" }} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-accent/5 rounded-full blur-3xl" />
                 {/* Grid pattern */}
                 <div
                   className="absolute inset-0 opacity-[0.04]"
@@ -137,7 +137,7 @@ export default function AboutPage() {
                         alt="Trust and transparency in SEO"
                         width={400}
                         height={300}
-                        className="relative w-72 lg:w-80 rounded-2xl shadow-2xl border border-white/10"
+                        className="relative w-56 sm:w-64 lg:w-80 rounded-2xl shadow-2xl border border-white/10"
                       />
                     </div>
                   </div>

@@ -644,14 +644,14 @@ export default function BriefGenerator() {
                     <label className="block text-sm font-medium text-text mb-1.5">
                       How important is fast results? (1 = Patient, 5 = Urgent)
                     </label>
-                    <div className="flex items-center gap-4 mt-2">
-                      <span className="text-sm text-text-muted">Patient</span>
-                      <div className="flex gap-2 flex-1 justify-center">
+                    <div className="flex items-center gap-2 sm:gap-4 mt-2">
+                      <span className="text-xs sm:text-sm text-text-muted">Patient</span>
+                      <div className="flex gap-1.5 sm:gap-2 flex-1 justify-center">
                         {[1, 2, 3, 4, 5].map((n) => (
                           <button
                             key={n}
                             onClick={() => update("urgency", n)}
-                            className={`h-12 w-12 rounded-xl text-lg font-bold transition-all ${
+                            className={`h-10 w-10 sm:h-12 sm:w-12 rounded-xl text-base sm:text-lg font-bold transition-all ${
                               data.urgency === n
                                 ? "bg-accent text-primary-dark ring-2 ring-accent/50"
                                 : "bg-surface border border-border text-text-muted hover:border-primary/30"
@@ -661,7 +661,7 @@ export default function BriefGenerator() {
                           </button>
                         ))}
                       </div>
-                      <span className="text-sm text-text-muted">Urgent</span>
+                      <span className="text-xs sm:text-sm text-text-muted">Urgent</span>
                     </div>
                   </div>
                 </div>

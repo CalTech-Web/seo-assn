@@ -133,9 +133,9 @@ export default function Home() {
         <HeroSection />
 
         {/* Why SEO Matters */}
-        <section className="relative py-20 bg-white overflow-hidden">
+        <section className="relative py-14 sm:py-16 lg:py-20 bg-white overflow-hidden">
           {/* Decorative orb */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 bg-accent/5 rounded-full blur-3xl" />
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
               <div className="flex-1 text-center lg:text-left">
@@ -153,11 +153,11 @@ export default function Home() {
                   alt="SEO statistics and impact"
                   width={280}
                   height={280}
-                  className="w-48 lg:w-64"
+                  className="w-36 sm:w-48 lg:w-64"
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
@@ -174,7 +174,7 @@ export default function Home() {
         </section>
 
         {/* Free Tools */}
-        <section className="relative py-20 bg-gradient-to-b from-surface to-white overflow-hidden">
+        <section className="relative py-14 sm:py-16 lg:py-20 bg-gradient-to-b from-surface to-white overflow-hidden">
           {/* Dot pattern */}
           <div
             className="absolute inset-0 opacity-[0.02]"
@@ -236,11 +236,11 @@ export default function Home() {
         </section>
 
         {/* Trust Section */}
-        <section className="relative py-20 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white">
+        <section className="relative py-14 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white">
           {/* Gradient orbs like hero */}
-          <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute top-1/4 right-1/4 w-48 sm:w-60 lg:w-72 h-48 sm:h-60 lg:h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
           <div
-            className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
+            className="absolute bottom-1/4 left-1/4 w-36 sm:w-44 lg:w-56 h-36 sm:h-44 lg:h-56 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
             style={{ animationDelay: "1.5s" }}
           />
           {/* Dot pattern */}
@@ -286,8 +286,8 @@ export default function Home() {
         </section>
 
         {/* Learn SEO Articles */}
-        <section className="relative py-20 bg-white overflow-hidden">
-          <div className="absolute top-0 left-0 w-72 h-72 bg-primary/3 rounded-full blur-3xl" />
+        <section className="relative py-14 sm:py-16 lg:py-20 bg-white overflow-hidden">
+          <div className="absolute top-0 left-0 w-48 sm:w-60 lg:w-72 h-48 sm:h-60 lg:h-72 bg-primary/3 rounded-full blur-3xl" />
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
             {/* Header with illustration */}
             <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
@@ -310,7 +310,7 @@ export default function Home() {
                   alt="Learn SEO guides illustration"
                   width={280}
                   height={280}
-                  className="w-56 lg:w-72"
+                  className="w-40 sm:w-48 lg:w-72"
                 />
               </div>
             </div>

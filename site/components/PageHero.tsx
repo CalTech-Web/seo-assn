@@ -22,11 +22,11 @@ export default function PageHero({
   image,
 }: PageHeroProps) {
   return (
-    <section className="relative pt-[187px] pb-20 min-h-[340px] overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+    <section className="relative pt-28 sm:pt-36 lg:pt-[187px] pb-12 sm:pb-16 lg:pb-20 min-h-[280px] sm:min-h-[320px] lg:min-h-[340px] overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
       {/* Decorative orbs */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute top-0 right-0 w-48 sm:w-60 lg:w-72 h-48 sm:h-60 lg:h-72 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
       <div
-        className="absolute bottom-0 left-0 w-56 h-56 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
+        className="absolute bottom-0 left-0 w-36 sm:w-44 lg:w-56 h-36 sm:h-44 lg:h-56 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
         style={{ animationDelay: "1.5s" }}
       />
       {/* Dot pattern overlay */}

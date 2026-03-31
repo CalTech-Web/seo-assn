@@ -17,14 +17,14 @@ export default function CTABanner({
   variant = "accent",
 }: CTABannerProps) {
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+    <section className="relative py-14 sm:py-16 lg:py-20 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
       {/* Decorative orbs */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+      <div className="absolute top-0 right-0 w-48 sm:w-64 lg:w-80 h-48 sm:h-64 lg:h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
       <div
-        className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
+        className="absolute bottom-0 left-0 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow"
         style={{ animationDelay: "1.5s" }}
       />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-accent/5 rounded-full blur-3xl" />
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"

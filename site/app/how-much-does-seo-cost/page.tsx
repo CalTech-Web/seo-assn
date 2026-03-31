@@ -197,8 +197,8 @@ export default function HowMuchDoesSEOCostPage() {
 
             <section className="not-prose">
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-10">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/8 rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-accent/10 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 bg-blue-500/8 rounded-full blur-3xl" />
                 <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
                   <div className="shrink-0">
                     <Image
@@ -206,7 +206,7 @@ export default function HowMuchDoesSEOCostPage() {
                       alt="SEO pricing guide preview"
                       width={360}
                       height={270}
-                      className="w-64 lg:w-72 rounded-xl shadow-2xl"
+                      className="w-48 sm:w-56 lg:w-72 rounded-xl shadow-2xl"
                     />
                   </div>
                   <div className="flex-1 text-center lg:text-left">
