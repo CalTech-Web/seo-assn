@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
@@ -329,29 +330,42 @@ export default function Home() {
             className="absolute bottom-0 left-1/4 w-48 h-48 bg-amber-300/20 rounded-full blur-3xl animate-pulse-slow"
             style={{ animationDelay: "1.5s" }}
           />
-          <div className="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Ready to Find Out Where You Stand?
-            </h2>
-            <p className="text-lg text-text-muted mb-8">
-              Start with a free SEO audit checklist. It takes less than 5
-              minutes and gives you a clear picture of what is working and
-              what needs fixing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/seo-audit-checklist"
-                className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
-              >
-                Start the SEO Audit
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
-                href="/get-started"
-                className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
-              >
-                Get a Free Strategy Call
-              </Link>
+          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="flex-1 flex justify-center lg:justify-start">
+                <Image
+                  src="/images/flat-hero-search-ranking.png"
+                  alt="SEO search ranking illustration"
+                  width={480}
+                  height={480}
+                  className="w-full max-w-md"
+                />
+              </div>
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+                  Ready to Find Out Where You Stand?
+                </h2>
+                <p className="text-lg text-text-muted mb-8">
+                  Start with a free SEO audit checklist. It takes less than 5
+                  minutes and gives you a clear picture of what is working and
+                  what needs fixing.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Link
+                    href="/seo-audit-checklist"
+                    className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                  >
+                    Start the SEO Audit
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                  <Link
+                    href="/get-started"
+                    className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5"
+                  >
+                    Get a Free Strategy Call
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
