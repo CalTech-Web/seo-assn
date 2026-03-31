@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | The SEO Association",
   description:
     "Privacy policy for The SEO Association, a free SEO resource powered by CalTech Web.",
+  alternates: { canonical: "https://seoassn.com/privacy" },
 };
 
 export default function PrivacyPolicy() {
@@ -39,10 +41,13 @@ export default function PrivacyPolicy() {
             What We Collect
           </h2>
           <p>
-            When you use our SEO Brief Generator (Step 4), you may choose to
-            provide business information, contact details, and SEO-related
-            data. This information is submitted voluntarily and is only
-            collected when you complete and submit the form.
+            When you use our{" "}
+            <Link href="/get-started" className="text-accent-dark hover:text-accent">
+              SEO Brief Generator
+            </Link>
+            , you may choose to provide business information, contact details,
+            and SEO-related data. This information is submitted voluntarily and
+            is only collected when you complete and submit the form.
           </p>
           <p>
             We also collect anonymous usage data through Google Analytics 4 to
@@ -93,12 +98,16 @@ export default function PrivacyPolicy() {
 
           <h2 className="text-xl font-bold text-primary mt-8">Contact</h2>
           <p>
-            For privacy-related questions, contact CalTech Web at{" "}
+            For privacy-related questions,{" "}
+            <Link href="/contact" className="text-accent-dark hover:text-accent">
+              reach out through our contact page
+            </Link>{" "}
+            or email CalTech Web at{" "}
             <a
-              href="mailto:saif@caltechweb.com"
+              href="mailto:brandon@caltechweb.com"
               className="text-accent-dark hover:text-accent"
             >
-              saif@caltechweb.com
+              brandon@caltechweb.com
             </a>
             .
           </p>

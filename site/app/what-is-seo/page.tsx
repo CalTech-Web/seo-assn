@@ -78,7 +78,17 @@ export default function WhatIsSEOPage() {
                 visit billions of web pages, read their content, and store
                 that information in a massive index. When someone types a
                 search query, Google looks through that index and tries to
-                return the most relevant, trustworthy results.
+                return the most relevant, trustworthy results. Google explains
+                this entire process in their{" "}
+                <a
+                  href="https://www.google.com/search/howsearchworks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  How Search Works
+                </a>{" "}
+                guide.
               </p>
               <p className="text-text-muted leading-relaxed mb-4">
                 Google considers hundreds of factors when deciding which pages
@@ -115,7 +125,17 @@ export default function WhatIsSEOPage() {
                 traffic stops the moment you stop paying, SEO builds lasting
                 visibility. Once you rank well, you continue getting traffic
                 without paying per visit. It is one of the highest-ROI
-                marketing investments a small business can make.
+                marketing investments a small business can make. If you want
+                a deeper dive into how SEO works,{" "}
+                <a
+                  href="https://moz.com/beginners-guide-to-seo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Moz&apos;s Beginner&apos;s Guide to SEO
+                </a>{" "}
+                is one of the best free resources available.
               </p>
             </section>
 
@@ -146,6 +166,20 @@ export default function WhatIsSEOPage() {
                   );
                 })}
               </div>
+              <p className="text-text-muted leading-relaxed mt-5">
+                Each of these pillars plays a role in how search engines
+                evaluate your site. For a comprehensive look at technical
+                best practices and how Google interprets your pages, explore{" "}
+                <a
+                  href="https://developers.google.com/search/docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Google Search Central documentation
+                </a>
+                .
+              </p>
             </section>
 
             <section>
@@ -164,7 +198,16 @@ export default function WhatIsSEOPage() {
                 long-term value per dollar spent. SEO leads also convert at a
                 higher rate (14.6%) compared to outbound marketing leads
                 (1.7%) because people who find you through search are actively
-                looking for what you offer.
+                looking for what you offer.{" "}
+                <a
+                  href="https://www.searchenginejournal.com/seo-vs-ppc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Search Engine Journal breaks down the full comparison
+                </a>{" "}
+                if you want to weigh both options side by side.
               </p>
             </section>
 

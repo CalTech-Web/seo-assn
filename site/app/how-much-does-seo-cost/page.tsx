@@ -11,7 +11,7 @@ import { ArrowRight, AlertTriangle, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = {
   title: "How Much Does SEO Cost in 2026? Pricing Guide | The SEO Association",
   description:
-    "Real SEO pricing data for small businesses in 2026. Monthly plans from $500 to $5,000+, one-time audits from $300. Learn what drives costs and how to get the best value.",
+    "Real SEO pricing for small businesses in 2026. Monthly plans from $500 to $5,000+, one-time audits from $300. See what drives cost.",
   alternates: { canonical: "https://seoassn.com/how-much-does-seo-cost" },
   openGraph: {
     title: "How Much Does SEO Cost? Real Pricing for Small Businesses",
@@ -53,7 +53,7 @@ const redFlags = [
   "Offering SEO for under $200/month (you get what you pay for)",
   "Promising results in 30 days or less",
   "Refusing to explain what they are doing",
-  "Using tactics that violate Google's guidelines (link buying, keyword stuffing)",
+  "Using tactics that violate Google's quality guidelines (link buying, keyword stuffing)",
   "Locking you into long-term contracts without clear deliverables",
 ];
 
@@ -89,8 +89,18 @@ export default function HowMuchDoesSEOCostPage() {
               </h2>
               <p className="text-text-muted leading-relaxed mb-6">
                 SEO pricing varies widely because every business has different
-                competition levels, website conditions, and goals. Here is
-                what the typical investment looks like at each level:
+                competition levels, website conditions, and goals. According to{" "}
+                <a
+                  href="https://www.searchenginejournal.com/how-much-does-seo-cost/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Search Engine Journal&apos;s pricing research
+                </a>
+                , costs can range from a few hundred dollars a month to well
+                over $10,000 depending on the scope. Here is what the typical
+                investment looks like at each level:
               </p>
               <div className="not-prose space-y-4">
                 {tiers.map((tier) => (
@@ -134,7 +144,17 @@ export default function HowMuchDoesSEOCostPage() {
                   Current state of your website.
                 </strong>{" "}
                 A brand-new site with no content requires more upfront work
-                than an established site that just needs optimization.
+                than an established site that just needs optimization. As{" "}
+                <a
+                  href="https://ahrefs.com/blog/seo-pricing/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Ahrefs explains in their SEO pricing breakdown
+                </a>
+                , the amount of foundational work your site needs is one of
+                the biggest factors in overall cost.
               </p>
               <p className="text-text-muted leading-relaxed mb-4">
                 <strong className="text-text">Content creation.</strong>{" "}
@@ -164,6 +184,20 @@ export default function HowMuchDoesSEOCostPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-text-muted leading-relaxed mt-4 text-sm">
+                If you are unsure whether an SEO provider follows ethical
+                practices, review{" "}
+                <a
+                  href="https://developers.google.com/search/docs/essentials"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Google&apos;s Search Essentials documentation
+                </a>{" "}
+                to understand what Google considers acceptable and what it
+                does not.
+              </p>
             </section>
 
             <section>
@@ -192,6 +226,18 @@ export default function HowMuchDoesSEOCostPage() {
                 rate compared to 1.7% for outbound marketing. That means
                 people who find you through Google are 8 times more likely to
                 become customers than people you cold-call or cold-email.
+                Research from{" "}
+                <a
+                  href="https://www.brightedge.com/resources/research-reports"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  BrightEdge
+                </a>{" "}
+                shows that organic search drives over 53% of all website
+                traffic, making it the single largest channel for most
+                businesses.
               </p>
             </section>
 

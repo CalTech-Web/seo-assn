@@ -9,7 +9,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 export const metadata: Metadata = {
   title: "Free SEO Audit Checklist for Small Business | The SEO Association",
   description:
-    "Score your website across 25 SEO factors in 5 categories. Free interactive checklist covering visibility, on-page SEO, content, local SEO, and authority. No tools needed.",
+    "Score your website across 25 SEO factors in 5 categories. Free interactive checklist for visibility, content, local SEO, and more.",
   alternates: { canonical: "https://seoassn.com/seo-audit-checklist" },
   openGraph: {
     title: "Free SEO Audit Checklist | Score Your Website in Minutes",

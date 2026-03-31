@@ -11,7 +11,7 @@ import { CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Do I Need SEO for My Small Business? | The SEO Association",
   description:
-    "Honest answer on whether your small business needs SEO. Learn the signs that SEO will pay for itself, when to wait, and what to do first. No sales pitch, just facts.",
+    "Honest answer on whether your small business needs SEO. Learn the signs SEO will pay for itself and when to wait.",
   alternates: { canonical: "https://seoassn.com/do-i-need-seo" },
   openGraph: {
     title: "Do I Need SEO? The Honest Answer for Small Business Owners",
@@ -65,8 +65,18 @@ export default function DoINeedSEOPage() {
                 If the answer is yes, you need some form of SEO. It does not
                 mean you need a $5,000/month campaign. It might mean you need
                 to set up a Google Business Profile, optimize your existing
-                pages, or simply make sure your site works on mobile. The
-                scale of investment depends on your competition and goals.
+                pages, or simply make sure your site works on mobile. As{" "}
+                <a
+                  href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Google&apos;s own SEO starter guide
+                </a>{" "}
+                explains, even basic optimizations can make a meaningful
+                difference. The scale of investment depends on your
+                competition and goals.
               </p>
               <p className="text-text-muted leading-relaxed">
                 If the answer is no, if your business runs entirely on
@@ -94,8 +104,18 @@ export default function DoINeedSEOPage() {
               </div>
               <p className="text-text-muted leading-relaxed mt-4">
                 If three or more of these describe your situation, SEO is
-                almost certainly worth the investment. The question is not
-                &quot;if&quot; but &quot;how much.&quot;
+                almost certainly worth the investment.{" "}
+                <a
+                  href="https://sparktoro.com/blog/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Research from SparkToro
+                </a>{" "}
+                consistently shows that the majority of web traffic still
+                comes from organic search. The question is not &quot;if&quot;
+                but &quot;how much.&quot;
               </p>
             </section>
 
@@ -128,8 +148,19 @@ export default function DoINeedSEOPage() {
               <p className="text-text-muted leading-relaxed mb-4">
                 Every day your website does not show up for relevant searches,
                 potential customers are finding and choosing your competitors
-                instead. That is not just a missed click, it is a missed sale,
-                a missed relationship, and a missed referral chain.
+                instead. As{" "}
+                <a
+                  href="https://www.searchenginejournal.com/seo-guide/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                >
+                  Search Engine Journal&apos;s SEO guide
+                </a>{" "}
+                highlights, organic search is often the single largest source
+                of website traffic. That is not just a missed click, it is a
+                missed sale, a missed relationship, and a missed referral
+                chain.
               </p>
               <p className="text-text-muted leading-relaxed">
                 Consider this: if your average customer is worth $500 to your
@@ -162,9 +193,19 @@ export default function DoINeedSEOPage() {
                     <p className="text-white/70 leading-relaxed mb-6">
                       The most efficient way to find out is to take our free SEO audit
                       checklist. It takes less than 5 minutes and evaluates your website
-                      across 25 important SEO factors. From there, you can decide whether
-                      to tackle the fixes yourself, hire help, or start with a one-time
-                      SEO audit from CalTech Web (starting at $300, credited toward any
+                      across 25 important SEO factors. If you serve a local area, start
+                      by claiming your listing on{" "}
+                      <a
+                        href="https://www.google.com/business/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-dark hover:text-accent font-medium underline underline-offset-2"
+                      >
+                        Google Business Profile
+                      </a>
+                      , then use the checklist results to decide whether to tackle the
+                      remaining fixes yourself, hire help, or start with a one-time SEO
+                      audit from CalTech Web (starting at $300, credited toward any
                       ongoing plan).
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">

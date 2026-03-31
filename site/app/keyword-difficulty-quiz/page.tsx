@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title:
     "Keyword Difficulty Quiz: Can You Rank on Google? | The SEO Association",
   description:
-    "Answer 5 quick questions to find out how competitive your market is on Google. Free keyword difficulty assessment for small business owners. No technical knowledge needed.",
+    "Answer 5 quick questions to find out how competitive your market is on Google. Free keyword difficulty quiz for small businesses.",
   alternates: {
     canonical: "https://seoassn.com/keyword-difficulty-quiz",
   },

@@ -236,35 +236,41 @@ export default function BriefGenerator() {
 
       // Send to caltechweb-forms if checked
       if (data.sendToCalTech) {
-        await fetch("https://forms.caltechweb.com/api/send", {
+        const messageParts = [
+          `Business Name: ${data.businessName}`,
+          `Industry: ${data.industry}`,
+          `Location: ${data.location}`,
+          data.yearsInBusiness ? `Years in Business: ${data.yearsInBusiness}` : "",
+          data.websiteUrl ? `Website: ${data.websiteUrl}` : "",
+          "",
+          `Previous SEO: ${data.doneSEO}`,
+          data.seoPastExperience ? `Past SEO Experience: ${data.seoPastExperience}` : "",
+          data.knowKeywords ? `Knows Target Keywords: ${data.knowKeywords}` : "",
+          data.targetKeywords ? `Target Keywords: ${data.targetKeywords}` : "",
+          data.competitors ? `Competitors: ${data.competitors}` : "",
+          "",
+          `Primary Goal: ${data.primaryGoal}`,
+          data.successIn12Months ? `Success in 12 Months: ${data.successIn12Months}` : "",
+          data.biggestFrustration ? `Biggest Frustration: ${data.biggestFrustration}` : "",
+          "",
+          `Monthly Budget: ${data.budgetRange}`,
+          `Start Timeline: ${data.startTimeline}`,
+          `Urgency (1-5): ${data.urgency}`,
+          data.additionalNotes ? `\nAdditional Notes: ${data.additionalNotes}` : "",
+          "",
+          `Phone: ${data.phone || "Not provided"}`,
+          `Best Time to Contact: ${data.bestTime || "Not specified"}`,
+        ].filter(Boolean).join("\n");
+
+        await fetch("https://forms.caltechweb.com/api/submit", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            domain: "seoassn.com",
-            subject: `New SEO Lead — ${data.businessName} — ${data.budgetRange}`,
-            fields: {
-              "Business Name": data.businessName,
-              Industry: data.industry,
-              Location: data.location,
-              "Years in Business": data.yearsInBusiness,
-              Website: data.websiteUrl,
-              "Previous SEO": data.doneSEO,
-              "Past SEO Experience": data.seoPastExperience,
-              "Knows Target Keywords": data.knowKeywords,
-              "Target Keywords": data.targetKeywords,
-              Competitors: data.competitors,
-              "Primary Goal": data.primaryGoal,
-              "Success in 12 Months": data.successIn12Months,
-              "Biggest Frustration": data.biggestFrustration,
-              "Monthly Budget": data.budgetRange,
-              "Start Timeline": data.startTimeline,
-              "Urgency (1-5)": String(data.urgency),
-              "Additional Notes": data.additionalNotes,
-              Name: data.fullName,
-              Email: data.email,
-              Phone: data.phone || "Not provided",
-              "Best Time to Contact": data.bestTime,
-            },
+            site: "seoassn.com",
+            name: data.fullName,
+            email: data.email,
+            message: messageParts,
+            source: "free-quote",
           }),
         }).catch(() => {
           // silently handle - form still submitted locally

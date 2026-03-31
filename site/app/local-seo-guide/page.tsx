@@ -11,7 +11,7 @@ import { MapPin, Star, Building2, Globe, Phone, ArrowRight, CheckCircle2 } from 
 export const metadata: Metadata = {
   title: "Local SEO Guide: How to Rank in Google Maps | The SEO Association",
   description:
-    "Complete local SEO guide for small businesses. Learn how to optimize your Google Business Profile, build citations, get reviews, and show up in the local map pack.",
+    "Complete local SEO guide for small businesses. Optimize your Google Business Profile, build citations, and rank in the map pack.",
   alternates: { canonical: "https://seoassn.com/local-seo-guide" },
   openGraph: {
     title: "Local SEO: The Complete Guide for Small Business Owners",
@@ -67,8 +67,9 @@ export default function LocalSEOGuidePage() {
                 Local SEO is the process of optimizing your online presence so
                 you show up when people search for services near them. When
                 someone searches &quot;plumber near me&quot; or &quot;best
-                dentist in [city],&quot; Google shows a map with three
-                business listings (the &quot;local pack&quot;) plus regular
+                dentist in [city],&quot;{" "}
+                <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent font-medium underline underline-offset-2">Google shows a map with local results</a>{" "}
+                featuring three business listings (the &quot;local pack&quot;) plus regular
                 search results below.
               </p>
               <p className="text-text-muted leading-relaxed">
@@ -88,7 +89,9 @@ export default function LocalSEOGuidePage() {
                 </h2>
               </div>
               <p className="text-text-muted leading-relaxed mb-6">
-                Your Google Business Profile (formerly Google My Business) is
+                Your{" "}
+                <a href="https://www.google.com/business/" target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent font-medium underline underline-offset-2">Google Business Profile</a>{" "}
+                (formerly Google My Business) is
                 the single most important factor in local SEO. It is what
                 appears in Google Maps and the local pack. If you do nothing
                 else, do this.
@@ -117,7 +120,9 @@ export default function LocalSEOGuidePage() {
               </div>
               <p className="text-text-muted leading-relaxed mb-4">
                 Google reviews directly affect your local ranking AND whether
-                people choose to call you. Businesses with more reviews and
+                people choose to call you. According to{" "}
+                <a href="https://www.brightlocal.com/research/local-consumer-review-survey/" target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent font-medium underline underline-offset-2">BrightLocal's Local Consumer Review Survey</a>,
+                businesses with more reviews and
                 higher ratings rank higher and convert better.
               </p>
               <p className="text-text-muted leading-relaxed mb-4">
@@ -145,7 +150,9 @@ export default function LocalSEOGuidePage() {
                 </h2>
               </div>
               <p className="text-text-muted leading-relaxed mb-4">
-                NAP stands for Name, Address, Phone number. Google checks
+                NAP stands for Name, Address, Phone number. As{" "}
+                <a href="https://moz.com/learn/seo/local" target="_blank" rel="noopener noreferrer" className="text-accent-dark hover:text-accent font-medium underline underline-offset-2">Moz's local SEO guide</a>{" "}
+                explains, Google checks
                 whether your business information is consistent across the
                 internet. If your address is &quot;123 Main St&quot; on your
                 website but &quot;123 Main Street&quot; on Yelp and

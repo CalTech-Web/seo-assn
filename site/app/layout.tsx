@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://seoassn.com"),
   title: "The SEO Association | Free SEO Tools for Small Business Owners",
   description:
-    "Find out if your website is showing up on Google. Free SEO audit checklist, keyword difficulty quiz, pricing guide, and personalized SEO brief generator for small business owners.",
+    "Free SEO audit checklist, keyword quiz, pricing guide, and brief generator. Find out if your website is showing up on Google.",
   keywords: [
     "how much does SEO cost",
     "do I need SEO for my small business",

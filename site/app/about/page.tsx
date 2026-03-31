@@ -10,7 +10,7 @@ import { Shield, Heart, Eye, ArrowRight, ExternalLink } from "lucide-react";
 export const metadata: Metadata = {
   title: "About The SEO Association | Free SEO Resources by CalTech Web",
   description:
-    "The SEO Association is a free educational resource by CalTech Web, helping small business owners understand SEO without the jargon, pressure, or hidden agendas.",
+    "The SEO Association is a free educational resource by CalTech Web, helping small business owners understand SEO without jargon.",
   alternates: { canonical: "https://seoassn.com/about" },
   openGraph: {
     title: "About Us | The SEO Association",
@@ -61,9 +61,15 @@ export default function AboutPage() {
               </h2>
               <p className="text-text-muted leading-relaxed mb-4">
                 Most small business owners know they &quot;should be doing
-                SEO&quot; but have no idea what that actually means, what it
-                should cost, or how to tell if an SEO company is giving them
-                a fair deal.
+                SEO&quot; but have no idea{" "}
+                <Link href="/what-is-seo" className="text-accent-dark hover:text-accent font-medium">
+                  what that actually means
+                </Link>
+                ,{" "}
+                <Link href="/how-much-does-seo-cost" className="text-accent-dark hover:text-accent font-medium">
+                  what it should cost
+                </Link>
+                , or how to tell if an SEO company is giving them a fair deal.
               </p>
               <p className="text-text-muted leading-relaxed mb-4">
                 We have seen too many businesses get burned by agencies that
@@ -74,10 +80,24 @@ export default function AboutPage() {
                 online presence.
               </p>
               <p className="text-text-muted leading-relaxed">
-                Every tool on this site is genuinely free. The audit
-                checklist, the keyword quiz, the pricing guide, and the
-                brief generator are all designed to help you whether or not
-                you ever hire anyone for SEO.
+                Every tool on this site is genuinely free. The{" "}
+                <Link href="/seo-audit-checklist" className="text-accent-dark hover:text-accent font-medium">
+                  audit checklist
+                </Link>
+                , the{" "}
+                <Link href="/keyword-difficulty-quiz" className="text-accent-dark hover:text-accent font-medium">
+                  keyword quiz
+                </Link>
+                , the{" "}
+                <Link href="/seo-pricing" className="text-accent-dark hover:text-accent font-medium">
+                  pricing guide
+                </Link>
+                , and the{" "}
+                <Link href="/get-started" className="text-accent-dark hover:text-accent font-medium">
+                  brief generator
+                </Link>{" "}
+                are all designed to help you whether or not you ever hire
+                anyone for SEO.
               </p>
             </section>
 
@@ -206,6 +226,27 @@ export default function AboutPage() {
           buttonText="Start the SEO Audit"
           buttonHref="/seo-audit-checklist"
           variant="primary"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "The SEO Association",
+              url: "https://seoassn.com",
+              logo: "https://seoassn.com/logo.svg",
+              description:
+                "A free educational resource helping small business owners understand SEO without jargon, pressure, or hidden agendas.",
+              parentOrganization: {
+                "@type": "Organization",
+                name: "CalTech Web",
+                url: "https://caltechweb.com",
+              },
+              sameAs: ["https://caltechweb.com"],
+            }),
+          }}
         />
       </main>
       <Footer />

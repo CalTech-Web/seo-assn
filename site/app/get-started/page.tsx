@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title:
     "Get a Free SEO Strategy Call | SEO Brief Generator | The SEO Association",
   description:
-    "Build your personalized SEO roadmap in minutes. Download a professional SEO brief as a PDF and optionally send it to CalTech Web for a free strategy consultation.",
+    "Build your personalized SEO roadmap in minutes. Download an SEO brief as a PDF and send it to CalTech Web for a free strategy call.",
   alternates: { canonical: "https://seoassn.com/get-started" },
   openGraph: {
     title: "Build Your Free SEO Roadmap | The SEO Association",
