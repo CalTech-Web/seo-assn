@@ -1,0 +1,102 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="clipboardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e2840"/>
+      <stop offset="100%" style="stop-color:#161f30"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="checkGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0a500"/>
+      <stop offset="100%" style="stop-color:#f5c842"/>
+    </linearGradient>
+    <radialGradient id="glowBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f0a500;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#f0a500;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="340" fill="url(#bgGrad)" rx="16"/>
+  <rect x="80" y="30" width="240" height="280" rx="8" fill="url(#glowBg)"/>
+
+  <!-- Clipboard shadow -->
+  <rect x="88" y="38" width="224" height="264" rx="10" fill="#0a0d14" opacity="0.5"/>
+
+  <!-- Clipboard body -->
+  <rect x="84" y="34" width="224" height="264" rx="10" fill="url(#clipboardGrad)" stroke="#2d3750" stroke-width="1.5"/>
+
+  <!-- Clipboard top clip -->
+  <rect x="150" y="24" width="92" height="28" rx="6" fill="#1a2133" stroke="#2d3750" stroke-width="1.5"/>
+  <rect x="170" y="30" width="52" height="8" rx="4" fill="#0d1117"/>
+  <!-- Clip bolt -->
+  <circle cx="196" cy="34" r="4" fill="#2d3750"/>
+  <circle cx="196" cy="34" r="2" fill="#161b2e"/>
+
+  <!-- Divider under clip -->
+  <line x1="84" y1="60" x2="308" y2="60" stroke="#2d3750" stroke-width="1" opacity="0.8"/>
+
+  <!-- Category 1 Header dots (5 categories) -->
+  <rect x="100" y="70" width="8" height="8" rx="2" fill="#f0a500" opacity="0.9"/>
+  <rect x="114" y="70" width="80" height="8" rx="4" fill="#2d3750" opacity="0.7"/>
+
+  <!-- Check row 1 - Gold checked -->
+  <rect x="104" y="88" width="14" height="14" rx="3" fill="#f0a500" opacity="0.9" filter="url(#glow)"/>
+  <polyline points="107,95 111,99 118,90" fill="none" stroke="#0d1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="91" width="120" height="6" rx="3" fill="#4a5568"/>
+  <rect x="248" y="91" width="40" height="6" rx="3" fill="#4a5568" opacity="0.4"/>
+
+  <!-- Check row 2 - Gold checked -->
+  <rect x="104" y="108" width="14" height="14" rx="3" fill="#f0a500" opacity="0.9" filter="url(#glow)"/>
+  <polyline points="107,115 111,119 118,110" fill="none" stroke="#0d1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="111" width="100" height="6" rx="3" fill="#4a5568"/>
+
+  <!-- Check row 3 - Gold checked -->
+  <rect x="104" y="128" width="14" height="14" rx="3" fill="#f0a500" opacity="0.9" filter="url(#glow)"/>
+  <polyline points="107,135 111,139 118,130" fill="none" stroke="#0d1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="131" width="140" height="6" rx="3" fill="#4a5568"/>
+
+  <!-- Category 2 header -->
+  <line x1="100" y1="152" x2="292" y2="152" stroke="#2d3750" stroke-width="0.8" opacity="0.5"/>
+  <rect x="100" y="160" width="8" height="8" rx="2" fill="#4dbfa8" opacity="0.9"/>
+  <rect x="114" y="160" width="68" height="8" rx="4" fill="#2d3750" opacity="0.7"/>
+
+  <!-- Check row 4 - Teal checked -->
+  <rect x="104" y="178" width="14" height="14" rx="3" fill="#4dbfa8" opacity="0.85"/>
+  <polyline points="107,185 111,189 118,180" fill="none" stroke="#0d1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="181" width="110" height="6" rx="3" fill="#4a5568"/>
+
+  <!-- Check row 5 - Teal checked -->
+  <rect x="104" y="198" width="14" height="14" rx="3" fill="#4dbfa8" opacity="0.85"/>
+  <polyline points="107,205 111,209 118,200" fill="none" stroke="#0d1117" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="124" y="201" width="130" height="6" rx="3" fill="#4a5568"/>
+
+  <!-- Category 3 header -->
+  <line x1="100" y1="222" x2="292" y2="222" stroke="#2d3750" stroke-width="0.8" opacity="0.5"/>
+  <rect x="100" y="230" width="8" height="8" rx="2" fill="#6cb4e8" opacity="0.9"/>
+  <rect x="114" y="230" width="75" height="8" rx="4" fill="#2d3750" opacity="0.7"/>
+
+  <!-- Check row 6 - Empty/Pending -->
+  <rect x="104" y="248" width="14" height="14" rx="3" fill="none" stroke="#2d3750" stroke-width="1.5"/>
+  <rect x="124" y="251" width="90" height="6" rx="3" fill="#2d3750" opacity="0.5"/>
+
+  <!-- Check row 7 - Empty/Pending -->
+  <rect x="104" y="268" width="14" height="14" rx="3" fill="none" stroke="#2d3750" stroke-width="1.5"/>
+  <rect x="124" y="271" width="110" height="6" rx="3" fill="#2d3750" opacity="0.5"/>
+
+  <!-- Progress bar at bottom -->
+  <rect x="100" y="294" width="192" height="6" rx="3" fill="#1a2133"/>
+  <rect x="100" y="294" width="122" height="6" rx="3" fill="url(#checkGold)" filter="url(#glow)"/>
+
+  <!-- Floating pencil icon top right -->
+  <g transform="translate(296, 50)">
+    <rect x="-6" y="-18" width="12" height="24" rx="2" fill="#1e2840" stroke="#f0a500" stroke-width="1.5" transform="rotate(-30)"/>
+    <polygon points="0,8 -4,16 4,16" fill="#f0a500" transform="rotate(-30)"/>
+    <line x1="-6" y1="-10" x2="6" y2="-10" stroke="#f0a500" stroke-width="1" opacity="0.5" transform="rotate(-30)"/>
+  </g>
+</svg>

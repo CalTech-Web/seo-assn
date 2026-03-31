@@ -275,19 +275,33 @@ export default function Home() {
         </section>
 
         {/* Learn SEO Articles */}
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="text-center mb-14">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-sm font-semibold mb-4 border border-primary/10">
-                Learn SEO
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary">
-                SEO Guides for Small Business Owners
-              </h2>
-              <p className="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
-                Plain-English answers to the questions every business owner
-                asks about SEO.
-              </p>
+        <section className="relative py-20 bg-white overflow-hidden">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-primary/3 rounded-full blur-3xl" />
+          <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+            {/* Header with illustration */}
+            <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
+              <div className="flex-1 text-center lg:text-left">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-sm font-semibold mb-4 border border-primary/10">
+                  Learn SEO
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary">
+                  SEO Guides for Small Business Owners
+                </h2>
+                <p className="mt-4 text-lg text-text-muted max-w-xl">
+                  Plain-English answers to the questions every business owner
+                  asks about SEO. No jargon, no fluff, just actionable knowledge
+                  you can use today.
+                </p>
+              </div>
+              <div className="shrink-0">
+                <Image
+                  src="/images/step1-audit-checklist.svg"
+                  alt="SEO audit checklist illustration"
+                  width={280}
+                  height={280}
+                  className="w-56 lg:w-72"
+                />
+              </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {articles.map((article, idx) => {
