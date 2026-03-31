@@ -1,0 +1,112 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Gauge gradient: green -> yellow -> red -->
+    <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4dbfa8"/>
+      <stop offset="40%" style="stop-color:#f5c842"/>
+      <stop offset="100%" style="stop-color:#e87979"/>
+    </linearGradient>
+    <radialGradient id="gaugeGlow" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" style="stop-color:#f0a500;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#f0a500;stop-opacity:0"/>
+    </radialGradient>
+    <clipPath id="gaugeClip">
+      <path d="M 60 210 A 140 140 0 0 1 340 210 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="400" height="340" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Background glow -->
+  <ellipse cx="200" cy="240" rx="160" ry="80" fill="url(#gaugeGlow)"/>
+
+  <!-- Gauge Track -->
+  <path d="M 50 220 A 150 150 0 0 1 350 220" fill="none" stroke="#1e2840" stroke-width="36" stroke-linecap="round"/>
+
+  <!-- Gauge Fill - colored gradient arc (60% difficulty shown) -->
+  <!-- Using multiple arcs for color gradient effect -->
+  <!-- Green zone (0-33%) -->
+  <path d="M 50 220 A 150 150 0 0 1 131 92" fill="none" stroke="#4dbfa8" stroke-width="28" stroke-linecap="butt" opacity="0.85"/>
+  <!-- Yellow zone (33-66%) -->
+  <path d="M 131 92 A 150 150 0 0 1 253 75" fill="none" stroke="#f5c842" stroke-width="28" stroke-linecap="butt" opacity="0.85"/>
+  <!-- Red zone start (shown partially, 60% mark) -->
+  <path d="M 253 75 A 150 150 0 0 1 284 83" fill="none" stroke="#e87979" stroke-width="28" stroke-linecap="butt" opacity="0.7"/>
+  <!-- Remaining grey -->
+  <path d="M 284 83 A 150 150 0 0 1 350 220" fill="none" stroke="#1e2840" stroke-width="28" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Gauge tick marks -->
+  <!-- Major ticks -->
+  <line x1="50" y1="220" x2="76" y2="220" stroke="#2d3750" stroke-width="2"/>
+  <line x1="74" y1="147" x2="85" y2="156" stroke="#2d3750" stroke-width="2"/>
+  <line x1="131" y1="94" x2="137" y2="106" stroke="#2d3750" stroke-width="2"/>
+  <line x1="200" y1="70" x2="200" y2="84" stroke="#2d3750" stroke-width="2"/>
+  <line x1="269" y1="94" x2="263" y2="106" stroke="#2d3750" stroke-width="2"/>
+  <line x1="326" y1="147" x2="315" y2="156" stroke="#2d3750" stroke-width="2"/>
+  <line x1="350" y1="220" x2="324" y2="220" stroke="#2d3750" stroke-width="2"/>
+
+  <!-- Gauge outer ring highlight -->
+  <path d="M 50 220 A 150 150 0 0 1 350 220" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Needle -->
+  <g transform="translate(200, 220)" filter="url(#glow)">
+    <!-- Needle pointing to ~65% (roughly 117deg from left = pointing up-right) -->
+    <line x1="0" y1="0" x2="-62" y2="-118" stroke="#f0a500" stroke-width="3" stroke-linecap="round"/>
+    <!-- Needle base circle -->
+    <circle cx="0" cy="0" r="14" fill="#1a2133" stroke="#f0a500" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="6" fill="#f0a500"/>
+    <!-- Needle dot -->
+    <circle cx="-62" cy="-118" r="4" fill="#f0a500" opacity="0.8"/>
+  </g>
+
+  <!-- Zone labels (abstract dots) -->
+  <!-- Easy zone -->
+  <circle cx="75" cy="195" r="5" fill="#4dbfa8" opacity="0.7"/>
+  <!-- Medium zone -->
+  <circle cx="200" cy="72" r="5" fill="#f5c842" opacity="0.7"/>
+  <!-- Hard zone -->
+  <circle cx="325" cy="195" r="5" fill="#e87979" opacity="0.7"/>
+
+  <!-- Competition bars below -->
+  <rect x="60" y="248" width="280" height="8" rx="4" fill="#1e2840"/>
+  <rect x="60" y="248" width="210" height="8" rx="4" fill="#f0a500" opacity="0.7"/>
+
+  <rect x="60" y="264" width="280" height="8" rx="4" fill="#1e2840"/>
+  <rect x="60" y="264" width="165" height="8" rx="4" fill="#6cb4e8" opacity="0.6"/>
+
+  <rect x="60" y="280" width="280" height="8" rx="4" fill="#1e2840"/>
+  <rect x="60" y="280" width="240" height="8" rx="4" fill="#e879a0" opacity="0.6"/>
+
+  <rect x="60" y="296" width="280" height="8" rx="4" fill="#1e2840"/>
+  <rect x="60" y="296" width="120" height="8" rx="4" fill="#4dbfa8" opacity="0.6"/>
+
+  <!-- Bar dots on right -->
+  <circle cx="278" cy="252" r="4" fill="#f0a500" opacity="0.8"/>
+  <circle cx="233" cy="268" r="4" fill="#6cb4e8" opacity="0.7"/>
+  <circle cx="308" cy="284" r="4" fill="#e879a0" opacity="0.7"/>
+  <circle cx="188" cy="300" r="4" fill="#4dbfa8" opacity="0.7"/>
+
+  <!-- Floating keyword pills -->
+  <rect x="30" y="30" width="70" height="20" rx="10" fill="#1e2840" stroke="#4dbfa8" stroke-width="1" opacity="0.6"/>
+  <rect x="36" y="36" width="30" height="8" rx="4" fill="#4dbfa8" opacity="0.4"/>
+  <rect x="70" y="36" width="24" height="8" rx="4" fill="#2d3750"/>
+
+  <rect x="300" y="28" width="70" height="20" rx="10" fill="#1e2840" stroke="#e87979" stroke-width="1" opacity="0.6"/>
+  <rect x="306" y="34" width="40" height="8" rx="4" fill="#e87979" opacity="0.4"/>
+  <rect x="350" y="34" width="14" height="8" rx="4" fill="#2d3750"/>
+
+  <rect x="140" y="18" width="120" height="20" rx="10" fill="#1e2840" stroke="#f0a500" stroke-width="1" opacity="0.7"/>
+  <rect x="146" y="24" width="50" height="8" rx="4" fill="#f0a500" opacity="0.5"/>
+  <rect x="200" y="24" width="54" height="8" rx="4" fill="#2d3750"/>
+</svg>

@@ -5,7 +5,7 @@ import { ArrowRight, Shield } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-dark">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-dark pt-[50px]">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light" />

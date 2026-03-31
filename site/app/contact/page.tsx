@@ -27,6 +27,7 @@ export default function ContactPage() {
           title="Get in Touch"
           subtitle="Have a question about SEO? Want to discuss your business situation? We are happy to help, no sales pitch required."
           breadcrumbs={[{ label: "Contact" }]}
+          image={{ src: "/images/cta-magnifier-growth.svg", alt: "Contact and growth illustration" }}
         />
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">

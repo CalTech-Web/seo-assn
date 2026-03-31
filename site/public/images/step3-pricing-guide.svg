@@ -1,0 +1,116 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="barGold" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0a500;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#f5c842;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="barTeal" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#4dbfa8;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#6fcfed;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="barPink" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#e879a0;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#f0a0c0;stop-opacity:0.8"/>
+    </linearGradient>
+    <radialGradient id="glowBg" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" style="stop-color:#f0a500;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#f0a500;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="340" fill="url(#bgGrad)" rx="16"/>
+  <rect x="40" y="40" width="320" height="260" rx="8" fill="url(#glowBg)"/>
+
+  <!-- Chart grid -->
+  <line x1="70" y1="60" x2="70" y2="270" stroke="#2d3750" stroke-width="1" opacity="0.5"/>
+  <line x1="70" y1="270" x2="370" y2="270" stroke="#2d3750" stroke-width="1" opacity="0.5"/>
+
+  <!-- Horizontal grid lines -->
+  <line x1="70" y1="60" x2="370" y2="60" stroke="#2d3750" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <line x1="70" y1="112" x2="370" y2="112" stroke="#2d3750" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <line x1="70" y1="164" x2="370" y2="164" stroke="#2d3750" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <line x1="70" y1="216" x2="370" y2="216" stroke="#2d3750" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Y-axis tick marks -->
+  <line x1="64" y1="60" x2="70" y2="60" stroke="#4a5568" stroke-width="1"/>
+  <line x1="64" y1="112" x2="70" y2="112" stroke="#4a5568" stroke-width="1"/>
+  <line x1="64" y1="164" x2="70" y2="164" stroke="#4a5568" stroke-width="1"/>
+  <line x1="64" y1="216" x2="70" y2="216" stroke="#4a5568" stroke-width="1"/>
+  <line x1="64" y1="270" x2="70" y2="270" stroke="#4a5568" stroke-width="1"/>
+
+  <!-- Y-axis value pills (abstract circles) -->
+  <circle cx="48" cy="60" r="5" fill="#2d3750"/>
+  <circle cx="48" cy="112" r="5" fill="#2d3750"/>
+  <circle cx="48" cy="164" r="5" fill="#2d3750"/>
+  <circle cx="48" cy="216" r="5" fill="#2d3750"/>
+
+  <!-- Bar Group 1 - Basic (small) -->
+  <rect x="94" y="214" width="30" height="56" rx="4" fill="url(#barTeal)"/>
+  <rect x="128" y="190" width="30" height="80" rx="4" fill="url(#barTeal)" opacity="0.5"/>
+
+  <!-- Bar Group 2 - Medium -->
+  <rect x="180" y="140" width="30" height="130" rx="4" fill="url(#barGold)"/>
+  <rect x="214" y="112" width="30" height="158" rx="4" fill="url(#barGold)" opacity="0.5"/>
+
+  <!-- Bar Group 3 - Premium (tall) -->
+  <rect x="266" y="80" width="30" height="190" rx="4" fill="url(#barPink)"/>
+  <rect x="300" y="60" width="30" height="210" rx="4" fill="url(#barPink)" opacity="0.5"/>
+
+  <!-- Top caps/highlights on bars -->
+  <rect x="94" y="214" width="30" height="4" rx="2" fill="#6fcfed" opacity="0.9" filter="url(#glow)"/>
+  <rect x="128" y="190" width="30" height="4" rx="2" fill="#6fcfed" opacity="0.6"/>
+  <rect x="180" y="140" width="30" height="4" rx="2" fill="#f5c842" opacity="0.9" filter="url(#glow)"/>
+  <rect x="214" y="112" width="30" height="4" rx="2" fill="#f5c842" opacity="0.6"/>
+  <rect x="266" y="80" width="30" height="4" rx="2" fill="#f0a0c0" opacity="0.9" filter="url(#glow)"/>
+  <rect x="300" y="60" width="30" height="4" rx="2" fill="#f0a0c0" opacity="0.6"/>
+
+  <!-- Value dot markers -->
+  <circle cx="109" cy="214" r="5" fill="#4dbfa8" filter="url(#glow)"/>
+  <circle cx="195" cy="140" r="5" fill="#f0a500" filter="url(#glow)"/>
+  <circle cx="281" cy="80" r="5" fill="#e879a0" filter="url(#glow)"/>
+
+  <!-- Connecting trend line -->
+  <polyline points="109,214 195,140 281,80" fill="none" stroke="#f0a500" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- X-axis group labels (circles) -->
+  <circle cx="121" cy="290" r="8" fill="#1e2840" stroke="#4dbfa8" stroke-width="1.5"/>
+  <circle cx="121" cy="290" r="4" fill="#4dbfa8" opacity="0.6"/>
+
+  <circle cx="207" cy="290" r="8" fill="#1e2840" stroke="#f0a500" stroke-width="1.5"/>
+  <circle cx="207" cy="290" r="4" fill="#f0a500" opacity="0.6"/>
+
+  <circle cx="293" cy="290" r="8" fill="#1e2840" stroke="#e879a0" stroke-width="1.5"/>
+  <circle cx="293" cy="290" r="4" fill="#e879a0" opacity="0.6"/>
+
+  <!-- Price tag icon top right -->
+  <g transform="translate(350, 50)">
+    <polygon points="0,-15 15,-15 15,10 0,20 -10,10 -10,-10" fill="#1e2840" stroke="#f0a500" stroke-width="1.5"/>
+    <circle cx="8" cy="-8" r="3" fill="none" stroke="#f0a500" stroke-width="1.5"/>
+    <line x1="-4" y1="4" x2="12" y2="4" stroke="#f0a500" stroke-width="1" opacity="0.5"/>
+    <line x1="-4" y1="10" x2="8" y2="10" stroke="#f0a500" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Floating value bubble -->
+  <rect x="158" y="116" width="50" height="20" rx="6" fill="#1e2840" stroke="#f0a500" stroke-width="1.5" filter="url(#glow)"/>
+  <rect x="166" y="122" width="22" height="8" rx="4" fill="#f0a500" opacity="0.7"/>
+  <rect x="192" y="122" width="10" height="8" rx="4" fill="#2d3750"/>
+  <!-- Bubble pointer -->
+  <polygon points="175,136 183,136 179,144" fill="#1e2840" stroke="#f0a500" stroke-width="1"/>
+
+  <!-- Dollar sign circles decorative -->
+  <circle cx="40" cy="310" r="8" fill="#1e2840" stroke="#f0a500" stroke-width="1" opacity="0.5"/>
+  <line x1="40" y1="305" x2="40" y2="315" stroke="#f0a500" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 36 307 Q 40 305 44 307 Q 40 309 36 311 Q 40 313 44 311" fill="none" stroke="#f0a500" stroke-width="1" opacity="0.5"/>
+
+  <circle cx="360" cy="310" r="8" fill="#1e2840" stroke="#4dbfa8" stroke-width="1" opacity="0.5"/>
+  <line x1="360" y1="305" x2="360" y2="315" stroke="#4dbfa8" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 356 307 Q 360 305 364 307 Q 360 309 356 311 Q 360 313 364 311" fill="none" stroke="#4dbfa8" stroke-width="1" opacity="0.5"/>
+</svg>

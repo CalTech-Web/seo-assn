@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -77,6 +78,7 @@ export default function HowMuchDoesSEOCostPage() {
             { label: "Learn SEO", href: "/" },
             { label: "How Much Does SEO Cost?" },
           ]}
+          image={{ src: "/images/step3-pricing-guide.svg", alt: "SEO pricing illustration" }}
         />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
 
@@ -198,6 +200,15 @@ export default function HowMuchDoesSEOCostPage() {
                 interactive pricing guide can help you see which tier matches
                 your situation.
               </p>
+              <div className="not-prose mb-6 flex justify-center">
+                <Image
+                  src="/images/flat-step3-pricing-guide.png"
+                  alt="SEO pricing guide preview"
+                  width={360}
+                  height={270}
+                  className="w-full max-w-xs rounded-xl"
+                />
+              </div>
               <div className="not-prose">
                 <Link
                   href="/seo-pricing"

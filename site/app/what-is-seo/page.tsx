@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -63,6 +64,7 @@ export default function WhatIsSEOPage() {
             { label: "Learn SEO", href: "/" },
             { label: "What Is SEO?" },
           ]}
+          image={{ src: "/images/guides-section.svg", alt: "SEO education illustration" }}
         />
 
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
@@ -177,6 +179,15 @@ export default function WhatIsSEOPage() {
                 so you can see exactly what is working and what needs
                 attention.
               </p>
+              <div className="not-prose mb-6 flex justify-center">
+                <Image
+                  src="/images/flat-step1-audit-checklist.png"
+                  alt="SEO audit checklist preview"
+                  width={360}
+                  height={270}
+                  className="w-full max-w-xs rounded-xl"
+                />
+              </div>
               <div className="not-prose">
                 <Link
                   href="/seo-audit-checklist"

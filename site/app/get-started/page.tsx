@@ -28,6 +28,7 @@ export default function GetStartedPage() {
           title="Build Your Free SEO Brief"
           subtitle="Fill in your business details, goals, and budget. Get a personalized SEO roadmap you can download or send to CalTech Web for a free consultation."
           breadcrumbs={[{ label: "Get Started" }]}
+          image={{ src: "/images/step4-brief-generator.svg", alt: "SEO brief generator illustration" }}
         />
         <BriefGenerator />
         <RelatedLinks

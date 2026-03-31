@@ -34,6 +34,7 @@ export default function KeywordQuizPage() {
             { label: "Free Tools", href: "/" },
             { label: "Keyword Difficulty Quiz" },
           ]}
+          image={{ src: "/images/step2-keyword-difficulty.svg", alt: "Keyword difficulty quiz illustration" }}
         />
         <KeywordQuiz />
         <CTABanner

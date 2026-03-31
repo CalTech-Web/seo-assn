@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -92,6 +93,7 @@ export default function HowLongDoesSEOTakePage() {
             { label: "Learn SEO", href: "/" },
             { label: "How Long Does SEO Take?" },
           ]}
+          image={{ src: "/images/cta-magnifier-growth.svg", alt: "SEO growth timeline illustration" }}
         />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
@@ -235,6 +237,15 @@ export default function HowLongDoesSEOTakePage() {
                 worth asking your SEO provider what is happening. Results
                 should not take forever.
               </p>
+              <div className="not-prose mb-6 flex justify-center">
+                <Image
+                  src="/images/flat-cta-magnifier-growth.png"
+                  alt="SEO growth and progress"
+                  width={360}
+                  height={270}
+                  className="w-full max-w-xs rounded-xl"
+                />
+              </div>
               <div className="not-prose">
                 <Link
                   href="/seo-audit-checklist"

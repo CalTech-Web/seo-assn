@@ -31,6 +31,7 @@ export default function SEOAuditPage() {
             { label: "Free Tools", href: "/" },
             { label: "SEO Audit Checklist" },
           ]}
+          image={{ src: "/images/step1-audit-checklist.svg", alt: "SEO audit checklist illustration" }}
         />
         <AuditChecklist />
         <CTABanner

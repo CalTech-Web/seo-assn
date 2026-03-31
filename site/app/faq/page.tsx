@@ -91,6 +91,7 @@ export default function FAQPage() {
           title="Frequently Asked Questions About SEO"
           subtitle="Plain-English answers to the questions every small business owner asks about SEO."
           breadcrumbs={[{ label: "FAQ" }]}
+          image={{ src: "/images/guides-section.svg", alt: "SEO guides illustration" }}
         />
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">

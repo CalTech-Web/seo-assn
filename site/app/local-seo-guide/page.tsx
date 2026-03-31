@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -54,6 +55,7 @@ export default function LocalSEOGuidePage() {
             { label: "Learn SEO", href: "/" },
             { label: "Local SEO Guide" },
           ]}
+          image={{ src: "/images/guides-section.svg", alt: "Local SEO guide illustration" }}
         />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
@@ -207,6 +209,15 @@ export default function LocalSEOGuidePage() {
                 of 500,000. Our free keyword difficulty quiz can tell you
                 where you stand in about 2 minutes.
               </p>
+              <div className="not-prose mb-6 flex justify-center">
+                <Image
+                  src="/images/flat-about-trust-network.png"
+                  alt="Local market competition"
+                  width={360}
+                  height={270}
+                  className="w-full max-w-xs rounded-xl"
+                />
+              </div>
               <div className="not-prose">
                 <Link
                   href="/keyword-difficulty-quiz"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -48,6 +49,7 @@ export default function DoINeedSEOPage() {
             { label: "Learn SEO", href: "/" },
             { label: "Do I Need SEO?" },
           ]}
+          image={{ src: "/images/about-trust-network.svg", alt: "SEO decision illustration" }}
         />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-8">
@@ -156,6 +158,15 @@ export default function DoINeedSEOPage() {
                 CalTech Web (starting at $300, credited toward any ongoing
                 plan).
               </p>
+              <div className="not-prose mb-6 flex justify-center">
+                <Image
+                  src="/images/flat-step2-keyword-difficulty.png"
+                  alt="Keyword difficulty assessment"
+                  width={360}
+                  height={270}
+                  className="w-full max-w-xs rounded-xl"
+                />
+              </div>
               <div className="not-prose flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/seo-audit-checklist"

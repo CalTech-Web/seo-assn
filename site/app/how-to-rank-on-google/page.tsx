@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
@@ -98,6 +99,7 @@ export default function HowToRankPage() {
             { label: "Learn SEO", href: "/" },
             { label: "How to Rank on Google" },
           ]}
+          image={{ src: "/images/step1-audit-checklist.svg", alt: "Google ranking checklist illustration" }}
         />
         <article className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
           <div className="prose max-w-none space-y-10">
@@ -132,6 +134,15 @@ export default function HowToRankPage() {
                 now. It covers all the factors we discussed above and gives
                 you a clear score in less than 5 minutes.
               </p>
+              <div className="not-prose mb-6 flex justify-center">
+                <Image
+                  src="/images/flat-step4-brief-generator.png"
+                  alt="SEO brief generator preview"
+                  width={360}
+                  height={270}
+                  className="w-full max-w-xs rounded-xl"
+                />
+              </div>
               <div className="not-prose flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/seo-audit-checklist"

@@ -1,0 +1,131 @@
+<svg viewBox="0 0 540 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#161b2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e2840"/>
+      <stop offset="100%" style="stop-color:#161f30"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0a500"/>
+      <stop offset="100%" style="stop-color:#f5c842"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="540" height="360" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Background subtle grid -->
+  <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.8" fill="#2d3750" opacity="0.5"/>
+  </pattern>
+  <rect width="540" height="360" fill="url(#dotGrid)" opacity="0.4"/>
+
+  <!-- Card 1 - Back left (rotated slightly) -->
+  <g transform="translate(80, 80) rotate(-8)">
+    <rect x="0" y="0" width="160" height="200" rx="10" fill="#161f30" stroke="#2d3750" stroke-width="1.5" opacity="0.6"/>
+    <rect x="0" y="0" width="160" height="5" rx="2" fill="#4a5568" opacity="0.5"/>
+    <rect x="12" y="18" width="100" height="8" rx="4" fill="#4a5568" opacity="0.4"/>
+    <rect x="12" y="34" width="136" height="5" rx="2.5" fill="#2d3750" opacity="0.5"/>
+    <rect x="12" y="44" width="120" height="5" rx="2.5" fill="#2d3750" opacity="0.5"/>
+    <rect x="12" y="54" width="130" height="5" rx="2.5" fill="#2d3750" opacity="0.5"/>
+  </g>
+
+  <!-- Card 2 - Back right (rotated opposite) -->
+  <g transform="translate(300, 75) rotate(6)">
+    <rect x="0" y="0" width="160" height="200" rx="10" fill="#161f30" stroke="#2d3750" stroke-width="1.5" opacity="0.6"/>
+    <rect x="0" y="0" width="160" height="5" rx="2" fill="#4dbfa8" opacity="0.4"/>
+    <rect x="12" y="18" width="90" height="8" rx="4" fill="#4a5568" opacity="0.4"/>
+    <rect x="12" y="34" width="130" height="5" rx="2.5" fill="#2d3750" opacity="0.5"/>
+    <rect x="12" y="44" width="110" height="5" rx="2.5" fill="#2d3750" opacity="0.5"/>
+    <rect x="12" y="54" width="125" height="5" rx="2.5" fill="#2d3750" opacity="0.5"/>
+  </g>
+
+  <!-- Main center card (upright, prominent) -->
+  <rect x="170" y="50" width="200" height="260" rx="12" fill="url(#card1)" stroke="#2d3750" stroke-width="2"/>
+
+  <!-- Card top accent stripe -->
+  <rect x="170" y="50" width="200" height="6" rx="3" fill="url(#goldGrad)" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Card category tag -->
+  <rect x="186" y="68" width="52" height="18" rx="9" fill="#f0a500" opacity="0.15" stroke="#f0a500" stroke-width="1"/>
+  <rect x="192" y="74" width="20" height="6" rx="3" fill="#f0a500" opacity="0.6"/>
+  <rect x="216" y="74" width="16" height="6" rx="3" fill="#f0a500" opacity="0.3"/>
+
+  <!-- Title block -->
+  <rect x="186" y="98" width="148" height="10" rx="5" fill="#f0a500" opacity="0.75" filter="url(#glow)"/>
+  <rect x="186" y="114" width="120" height="10" rx="5" fill="#f0a500" opacity="0.5"/>
+
+  <!-- Divider -->
+  <line x1="186" y1="135" x2="354" y2="135" stroke="#2d3750" stroke-width="1"/>
+
+  <!-- Article text lines -->
+  <rect x="186" y="144" width="148" height="5" rx="2.5" fill="#4a5568"/>
+  <rect x="186" y="156" width="132" height="5" rx="2.5" fill="#4a5568"/>
+  <rect x="186" y="168" width="140" height="5" rx="2.5" fill="#4a5568"/>
+  <rect x="186" y="180" width="108" height="5" rx="2.5" fill="#4a5568"/>
+
+  <!-- Mini graphic in card -->
+  <rect x="186" y="198" width="148" height="50" rx="6" fill="#0d1117" opacity="0.5"/>
+  <!-- Mini chart lines -->
+  <polyline points="196,238 214,222 232,230 250,212 268,218 286,204 304,210 322,196" fill="none" stroke="#f0a500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <polyline points="196,238 214,226 232,234 250,220 268,226 286,218 304,224 322,214" fill="none" stroke="#4dbfa8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+
+  <!-- Read arrow button -->
+  <rect x="186" y="264" width="84" height="26" rx="13" fill="#f0a500" opacity="0.15" stroke="#f0a500" stroke-width="1.5"/>
+  <rect x="196" y="272" width="40" height="10" rx="5" fill="#f0a500" opacity="0.5"/>
+  <!-- Arrow chevron -->
+  <polyline points="244,277 250,282 244,287" fill="none" stroke="#f0a500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right column cards (smaller) -->
+  <!-- Mini card 1 -->
+  <rect x="386" y="70" width="120" height="70" rx="8" fill="url(#card1)" stroke="#2d3750" stroke-width="1.5" opacity="0.8"/>
+  <rect x="386" y="70" width="120" height="4" rx="2" fill="#4dbfa8" opacity="0.6"/>
+  <rect x="396" y="82" width="70" height="7" rx="3.5" fill="#4a5568" opacity="0.7"/>
+  <rect x="396" y="96" width="90" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="396" y="106" width="80" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="396" y="118" width="50" height="14" rx="7" fill="#1a2133" stroke="#4dbfa8" stroke-width="1"/>
+  <rect x="402" y="124" width="24" height="6" rx="3" fill="#4dbfa8" opacity="0.5"/>
+
+  <!-- Mini card 2 -->
+  <rect x="386" y="155" width="120" height="70" rx="8" fill="url(#card1)" stroke="#2d3750" stroke-width="1.5" opacity="0.8"/>
+  <rect x="386" y="155" width="120" height="4" rx="2" fill="#e879a0" opacity="0.6"/>
+  <rect x="396" y="167" width="80" height="7" rx="3.5" fill="#4a5568" opacity="0.7"/>
+  <rect x="396" y="181" width="95" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="396" y="191" width="70" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="396" y="203" width="50" height="14" rx="7" fill="#1a2133" stroke="#e879a0" stroke-width="1"/>
+  <rect x="402" y="209" width="24" height="6" rx="3" fill="#e879a0" opacity="0.5"/>
+
+  <!-- Mini card 3 -->
+  <rect x="386" y="240" width="120" height="70" rx="8" fill="url(#card1)" stroke="#2d3750" stroke-width="1.5" opacity="0.8"/>
+  <rect x="386" y="240" width="120" height="4" rx="2" fill="#6cb4e8" opacity="0.6"/>
+  <rect x="396" y="252" width="88" height="7" rx="3.5" fill="#4a5568" opacity="0.7"/>
+  <rect x="396" y="266" width="85" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="396" y="276" width="75" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="396" y="288" width="50" height="14" rx="7" fill="#1a2133" stroke="#6cb4e8" stroke-width="1"/>
+  <rect x="402" y="294" width="24" height="6" rx="3" fill="#6cb4e8" opacity="0.5"/>
+
+  <!-- Left column small cards -->
+  <rect x="34" y="120" width="120" height="60" rx="8" fill="url(#card1)" stroke="#2d3750" stroke-width="1.5" opacity="0.8"/>
+  <rect x="34" y="120" width="120" height="4" rx="2" fill="#f0a500" opacity="0.6"/>
+  <rect x="44" y="132" width="80" height="7" rx="3.5" fill="#4a5568" opacity="0.7"/>
+  <rect x="44" y="146" width="95" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="44" y="156" width="70" height="5" rx="2.5" fill="#2d3750"/>
+
+  <rect x="34" y="200" width="120" height="60" rx="8" fill="url(#card1)" stroke="#2d3750" stroke-width="1.5" opacity="0.8"/>
+  <rect x="34" y="200" width="120" height="4" rx="2" fill="#4dbfa8" opacity="0.5"/>
+  <rect x="44" y="212" width="70" height="7" rx="3.5" fill="#4a5568" opacity="0.7"/>
+  <rect x="44" y="226" width="90" height="5" rx="2.5" fill="#2d3750"/>
+  <rect x="44" y="236" width="75" height="5" rx="2.5" fill="#2d3750"/>
+
+  <!-- Floating search icon -->
+  <g transform="translate(270, 332)" opacity="0.4">
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#f0a500" stroke-width="1.5"/>
+    <line x1="6" y1="6" x2="10" y2="10" stroke="#f0a500" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

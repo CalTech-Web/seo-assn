@@ -137,14 +137,25 @@ export default function Home() {
           {/* Decorative orb */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl" />
           <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary">
-                Why SEO Matters for Small Businesses
-              </h2>
-              <p className="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
-                Your customers are searching for your services right now. The
-                question is whether they find you or your competitor.
-              </p>
+            <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
+              <div className="flex-1 text-center lg:text-left">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary">
+                  Why SEO Matters for Small Businesses
+                </h2>
+                <p className="mt-4 text-lg text-text-muted max-w-xl">
+                  Your customers are searching for your services right now. The
+                  question is whether they find you or your competitor.
+                </p>
+              </div>
+              <div className="shrink-0">
+                <Image
+                  src="/images/flat-stats-seo-matters.png"
+                  alt="SEO statistics and impact"
+                  width={280}
+                  height={280}
+                  className="w-48 lg:w-64"
+                />
+              </div>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat) => (

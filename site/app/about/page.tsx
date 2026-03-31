@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -49,6 +50,7 @@ export default function AboutPage() {
           title="About The SEO Association"
           subtitle="We are a free educational resource for small business owners who want to understand SEO without the jargon, pressure, or guesswork."
           breadcrumbs={[{ label: "About" }]}
+          image={{ src: "/images/about-trust-network.svg", alt: "Trust network illustration" }}
         />
 
         <div className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
@@ -107,6 +109,15 @@ export default function AboutPage() {
                     </div>
                   );
                 })}
+              </div>
+              <div className="mt-8 flex justify-center">
+                <Image
+                  src="/images/flat-about-trust-network.png"
+                  alt="Trust and transparency in SEO"
+                  width={400}
+                  height={300}
+                  className="w-full max-w-sm rounded-xl"
+                />
               </div>
             </section>
 
