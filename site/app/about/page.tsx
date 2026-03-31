@@ -110,78 +110,91 @@ export default function AboutPage() {
                   );
                 })}
               </div>
-              <div className="mt-8 flex justify-center">
-                <Image
-                  src="/images/flat-about-trust-network.png"
-                  alt="Trust and transparency in SEO"
-                  width={400}
-                  height={300}
-                  className="w-full max-w-sm rounded-xl"
-                />
-              </div>
             </section>
 
-            <section>
-              <div className="relative rounded-2xl p-8 overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light">
+            <section className="not-prose">
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-light p-8 sm:p-12">
                 {/* Decorative orbs */}
-                <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/8 rounded-full blur-3xl" />
-                <div className="relative z-10">
-                  <h2 className="text-2xl font-bold text-white mb-4">
-                    Powered by CalTech Web
-                  </h2>
-                  <p className="text-white/70 leading-relaxed mb-4">
-                    The SEO Association is powered by{" "}
-                    <a
-                      href="https://caltechweb.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent hover:text-accent-light font-medium inline-flex items-center gap-1"
-                    >
-                      CalTech Web
-                      <ExternalLink className="h-3.5 w-3.5" />
-                    </a>
-                    , a professional web design and SEO company that builds
-                    websites and grows online visibility for small businesses
-                    across the country.
-                  </p>
-                  <p className="text-white/70 leading-relaxed mb-4">
-                    CalTech Web is the recommended in-house SEO partner
-                    throughout this site. When you use our brief generator and
-                    opt in, your project details go directly to the CalTech Web
-                    team for a free, no-pressure strategy call.
-                  </p>
-                  <p className="text-white/70 leading-relaxed">
-                    But let us be clear: you do not have to work with CalTech
-                    Web to benefit from this site. The tools and guides are
-                    useful regardless of who (if anyone) you hire for SEO.
-                  </p>
-                </div>
-              </div>
-            </section>
+                <div className="absolute top-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/8 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "1.5s" }} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+                {/* Grid pattern */}
+                <div
+                  className="absolute inset-0 opacity-[0.04]"
+                  style={{
+                    backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                    backgroundSize: "48px 48px",
+                  }}
+                />
 
-            <section>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Get in Touch
-              </h2>
-              <p className="text-text-muted leading-relaxed mb-6">
-                Have a question about SEO or want to discuss your
-                situation? We are happy to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/contact"
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-6 py-3 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
-                >
-                  Contact Us
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-                <Link
-                  href="/get-started"
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5"
-                >
-                  Get a Free Strategy Call
-                </Link>
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10">
+                  {/* Image */}
+                  <div className="shrink-0">
+                    <div className="relative">
+                      <div className="absolute -inset-4 bg-accent/10 rounded-2xl blur-2xl" />
+                      <Image
+                        src="/images/flat-about-trust-network.png"
+                        alt="Trust and transparency in SEO"
+                        width={400}
+                        height={300}
+                        className="relative w-72 lg:w-80 rounded-2xl shadow-2xl border border-white/10"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 text-center lg:text-left">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/15 border border-accent/20 backdrop-blur-sm mb-5">
+                      <ExternalLink className="h-3.5 w-3.5 text-accent" />
+                      <span className="text-sm font-semibold text-accent">Powered by CalTech Web</span>
+                    </div>
+
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                      Built by SEO Professionals, Free for Everyone
+                    </h2>
+
+                    <p className="text-white/70 leading-relaxed mb-3">
+                      The SEO Association is powered by{" "}
+                      <a
+                        href="https://caltechweb.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-accent-light font-medium underline underline-offset-2"
+                      >
+                        CalTech Web
+                      </a>
+                      , a professional web design and SEO company that builds
+                      websites and grows online visibility for small businesses
+                      across the country.
+                    </p>
+                    <p className="text-white/70 leading-relaxed mb-3">
+                      When you use our brief generator and opt in, your project
+                      details go directly to the CalTech Web team for a free,
+                      no-pressure strategy call.
+                    </p>
+                    <p className="text-white/50 leading-relaxed text-sm mb-8">
+                      You do not have to work with CalTech Web to benefit from this
+                      site. The tools and guides are useful regardless of who (if
+                      anyone) you hire for SEO.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                      <Link
+                        href="/contact"
+                        className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
+                      >
+                        Get in Touch
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                      <Link
+                        href="/get-started"
+                        className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-sm border border-white/10 transition-all hover:-translate-y-0.5"
+                      >
+                        Free Strategy Call
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
