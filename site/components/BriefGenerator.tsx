@@ -271,6 +271,7 @@ export default function BriefGenerator() {
             email: data.email,
             message: messageParts,
             source: "free-quote",
+          turnstileToken: document.querySelector<HTMLInputElement>("[name=cf-turnstile-response]")?.value || "",
           }),
         }).catch(() => {
           // silently handle - form still submitted locally
