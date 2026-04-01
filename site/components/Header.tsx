@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const toolLinks = [
+  { label: "Free SEO Analysis", href: "/free-seo-analysis" },
   { label: "SEO Audit Checklist", href: "/seo-audit-checklist" },
   { label: "Keyword Difficulty Quiz", href: "/keyword-difficulty-quiz" },
   { label: "SEO Pricing Guide", href: "/seo-pricing" },
@@ -164,6 +165,12 @@ export default function Header() {
               </Link>
             ))}
             <Link
+              href="/free-seo-analysis"
+              className="ml-2 px-4 py-2 rounded-lg text-sm font-bold bg-success/10 text-success border border-success/30 hover:bg-success/20 transition-colors"
+            >
+              Free SEO Scan
+            </Link>
+            <Link
               href="/get-started"
               className="ml-2 px-4 py-2 rounded-lg text-sm font-bold bg-accent text-primary-dark hover:bg-accent-light transition-colors"
             >
@@ -241,6 +248,12 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/free-seo-analysis"
+              className="block px-4 py-3 text-sm font-bold bg-success/10 text-success border border-success/30 rounded-lg text-center"
+            >
+              Free SEO Scan
+            </Link>
             <Link
               href="/get-started"
               className="block px-4 py-3 text-sm font-bold bg-accent text-primary-dark rounded-lg text-center"

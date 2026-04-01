@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 const toolLinks = [
+  { label: "Free SEO Analysis", href: "/free-seo-analysis" },
   { label: "SEO Audit Checklist", href: "/seo-audit-checklist" },
   { label: "Keyword Difficulty Quiz", href: "/keyword-difficulty-quiz" },
   { label: "SEO Pricing Guide", href: "/seo-pricing" },

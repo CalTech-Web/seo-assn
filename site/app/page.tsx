@@ -16,9 +16,20 @@ import {
   HelpCircle,
   Shield,
   CheckCircle2,
+  Search,
 } from "lucide-react";
 
 const tools = [
+  {
+    step: "Featured",
+    title: "Free SEO Analysis",
+    description:
+      "Enter your URL and get an instant SEO score. We check 35+ factors and show you exactly what to fix, no signup required.",
+    href: "/free-seo-analysis",
+    icon: Search,
+    color: "bg-green-50 border-green-300",
+    iconColor: "bg-green-100 text-green-600",
+  },
   {
     step: "Step 1",
     title: "SEO Audit Checklist",
@@ -371,16 +382,15 @@ export default function Home() {
                   Ready to Find Out Where You Stand?
                 </h2>
                 <p className="text-lg text-text-muted mb-8">
-                  Start with a free SEO audit checklist. It takes less than 5
-                  minutes and gives you a clear picture of what is working and
-                  what needs fixing.
+                  Enter your website URL and get an instant SEO score. We check
+                  35+ factors and show you exactly what to fix, completely free.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link
-                    href="/seo-audit-checklist"
+                    href="/free-seo-analysis"
                     className="btn-shimmer inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-0.5"
                   >
-                    Start the SEO Audit
+                    Scan My Website Free
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                   <Link

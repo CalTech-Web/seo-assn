@@ -56,10 +56,10 @@ export default function HeroSection() {
         </p>
 
         <Link
-          href="/seo-audit-checklist"
+          href="/free-seo-analysis"
           className="mt-10 inline-flex items-center gap-2 bg-accent hover:bg-accent-light text-primary-dark font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all duration-300 hover:-translate-y-0.5"
         >
-          Check My SEO Now
+          Scan My Website Free
           <ArrowRight className="h-5 w-5" />
         </Link>
 

@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Tool pages
     {
+      url: `${baseUrl}/free-seo-analysis`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/seo-audit-checklist`,
       lastModified: now,
       changeFrequency: "monthly",
