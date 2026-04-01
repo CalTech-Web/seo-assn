@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 
 export default function ContactForm() {
@@ -10,30 +10,21 @@ export default function ContactForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-
-  /* --- Spam protection state --- */
-  const [honeypot, setHoneypot] = useState("");
-  const [mathQuestion, setMathQuestion] = useState("");
-  const [mathToken, setMathToken] = useState("");
-  const [mathAnswer, setMathAnswer] = useState("");
-
-  const fetchChallenge = useCallback(async () => {
-    try {
-      const res = await fetch("https://forms.caltechweb.com/api/challenge");
-      if (res.ok) {
-        const data = await res.json();
-        setMathQuestion(data.question);
-        setMathToken(data.token);
-        setMathAnswer("");
-      }
-    } catch {
-      /* challenge fetch failed, form still works */
-    }
-  }, []);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    fetchChallenge();
-  }, [fetchChallenge]);
+    const interval = setInterval(() => {
+      if (window.turnstile && turnstileRef.current && !turnstileRef.current.hasChildNodes()) {
+        window.turnstile.render(turnstileRef.current, {
+          sitekey: "0x4AAAAAACyywKjKAAq2Sq5T",
+          callback: (token: string) => setTurnstileToken(token),
+        });
+        clearInterval(interval);
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   const canSubmit = name.trim() && email.trim() && message.trim();
 
@@ -53,10 +44,7 @@ export default function ContactForm() {
           email: email.trim(),
           message: message.trim(),
           source: "contact-page",
-          honeypot,
-          mathToken,
-          mathAnswer,
-          turnstileToken: document.querySelector<HTMLInputElement>("[name=cf-turnstile-response]")?.value || "",
+          turnstileToken,
         }),
       });
 
@@ -66,7 +54,6 @@ export default function ContactForm() {
       }
 
       setSubmitted(true);
-      fetchChallenge();
 
       if (
         typeof window !== "undefined" &&
@@ -78,7 +65,6 @@ export default function ContactForm() {
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
-      fetchChallenge();
     } finally {
       setSubmitting(false);
     }
@@ -149,42 +135,11 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Honeypot */}
-        <div className="hidden" aria-hidden="true">
-          <input
-            type="text"
-            name="honeypot"
-            tabIndex={-1}
-            autoComplete="off"
-            value={honeypot}
-            onChange={(e) => setHoneypot(e.target.value)}
-          />
-        </div>
-
-        {/* Math CAPTCHA */}
-        {mathQuestion && (
-          <div>
-            <label htmlFor="math-answer" className="block text-sm font-medium text-text mb-1.5">
-              {mathQuestion}
-            </label>
-            <input
-              id="math-answer"
-              type="text"
-              inputMode="numeric"
-              required
-              value={mathAnswer}
-              onChange={(e) => setMathAnswer(e.target.value)}
-              placeholder="Your answer"
-              className="w-full px-4 py-3 rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent"
-            />
-          </div>
-        )}
-
         {error && (
           <p className="text-sm text-red-600">{error}</p>
         )}
 
-        <div className="cf-turnstile" data-sitekey="0x4AAAAAACyywKjKAAq2Sq5T"></div>
+        <div ref={turnstileRef} className="mt-4"></div>
 
         <button
           type="submit"

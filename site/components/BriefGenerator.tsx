@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Building2,
@@ -83,6 +83,22 @@ export default function BriefGenerator() {
   const [data, setData] = useState<FormData>(initialData);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (window.turnstile && turnstileRef.current && !widgetIdRef.current) {
+        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: "0x4AAAAAACyywKjKAAq2Sq5T",
+          callback: (token: string) => setTurnstileToken(token),
+        });
+        clearInterval(interval);
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   const update = (field: keyof FormData, value: string | number | boolean) => {
     setData((prev) => ({ ...prev, [field]: value }));
@@ -271,7 +287,7 @@ export default function BriefGenerator() {
             email: data.email,
             message: messageParts,
             source: "free-quote",
-          turnstileToken: document.querySelector<HTMLInputElement>("[name=cf-turnstile-response]")?.value || "",
+          turnstileToken,
           }),
         }).catch(() => {
           // silently handle - form still submitted locally
@@ -755,6 +771,8 @@ export default function BriefGenerator() {
                       ))}
                     </div>
                   </div>
+                  <div ref={turnstileRef} className="mt-4" />
+
                   <div className="space-y-3 pt-3">
                     <label className="flex items-start gap-3 cursor-pointer">
                       <input
