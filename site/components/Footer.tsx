@@ -38,7 +38,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Image src="/logo.svg" alt="The SEO Association" width={32} height={32} className="h-8 w-8 brightness-0 invert" />
+              <Image src="/logo.svg" alt="The SEO Association" width={32} height={32} className="h-8 w-8" />
               <span className="text-lg font-bold text-white">
                 The SEO Association
               </span>
